@@ -1016,8 +1016,8 @@ p {
 }
 
 #main-header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .info-icons ul {
@@ -2167,6 +2167,9 @@ p.logged-in-as {
 .scroll-to-top:hover {
     opacity: .8;
 }
+.widget_envince_imagegrid_posts .entry-title.font-headlines > a {
+  font-size: 22px;
+}
 
 
 /**
@@ -2503,7 +2506,6 @@ p.logged-in-as {
 
 .following-post {
     padding-right: 0;
-    padding-left: 15px;
 }
 
 
