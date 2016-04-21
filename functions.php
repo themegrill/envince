@@ -99,7 +99,7 @@ function envince_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_register_style( 'envince-googlefonts', '//fonts.googleapis.com/css?family=Raleway:500' );
+	wp_register_style( 'envince-googlefonts', '//fonts.googleapis.com/css?family=Raleway:500|Open+Sans:500' );
 	wp_enqueue_style( 'envince-googlefonts' );
 
 	/* Load the bootstrap files */
