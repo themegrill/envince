@@ -346,7 +346,8 @@ object {
     display: inline-block;
     vertical-align: bottom;
     padding: 10px 12px 10px;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: 'Open Sans';
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
@@ -913,7 +914,7 @@ p {
 
 #content {
     padding-left: 0;
-    padding-right: 25px;
+    padding-right: 0;
 }
 
 
@@ -1148,14 +1149,21 @@ span.entry-category a {
 
 .entry-title {
     color: #444;
-    margin-top: 7px;
     margin-bottom: 10px;
 }
 
+.first-post .entry-title a {
+
+    font-size: 22px;
+}
 .entry-title a {
     color: #1C1C1C;
+    font-family: 'Open Sans';
     font-size: 15px;
     font-weight: 400;
+}
+.entry-content-wrapper .entry-title a {
+  font-size: 22px;
 }
 
 .entry-byline {
@@ -1213,7 +1221,6 @@ hr.section-divider {
 .footer-block.col-md-3 {
     padding-left: 5px;
 }
-
 
 /* Author Bio */
 
@@ -1513,10 +1520,12 @@ li.recentcomments {
 }
 .archive-title.font-headlines {
   margin-top: 20px;
+  font-family: 'Open Sans';
 }
 
 .widget-title.font-headlines {
     margin-bottom: 20px;
+    font-family: 'Open Sans';
 }
 
 .widget-area.col-sm-12.col-md-4 {
@@ -1698,6 +1707,7 @@ button:hover {
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
+    font-family: 'Open Sans';
     line-height: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
