@@ -1025,16 +1025,19 @@ p {
 }
 
 #branding {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 #branding .header-logo,
 #branding .header-text {
     float: left;
 }
+#branding .header-text {
+    padding: 15px;
+}
 
 #branding .header-logo {
-    padding-right: 15px;
+    padding-top: 15px;
 }
 
 #branding #site-title {
