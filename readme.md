@@ -25,14 +25,15 @@ The following resources are included/used for making the theme package.
 
 * Images in screenshot are taken from http://pixabay.com/ - Licensed under [CCO License]
 
-Nature and Beauty: https://pixabay.com/en/girl-blue-eyes-seductive-flowers-1319146/
-Programming with Patience: https://pixabay.com/en/macbook-apple-imac-computer-screen-606763/
+Painter: https://pixabay.com/en/painter-artist-man-work-painting-931711/
+Girl in Pink dress: https://pixabay.com/en/dress-girl-beautiful-woman-hands-864107/
 Old Car: https://pixabay.com/en/cuba-old-car-forest-red-sepia-1197800/
 Pet Dog: https://pixabay.com/en/dog-model-french-bulldog-view-1224267/
-Green Vegetables: https://pixabay.com/en/asparagus-green-green-asparagus-1307604/
-Cloud with girl: https://pixabay.com/en/freedom-cliff-beach-sky-adventure-1330003/
-Earth Image: https://pixabay.com/en/world-earth-globe-planet-153534/
-Flowers: https://pixabay.com/en/cup-sunshine-table-morning-joy-1283989/
+Girl wit Black Glasses: https://pixabay.com/en/woman-model-sunlight-sunglasses-422706/
+Programming with Patience: https://pixabay.com/en/macbook-apple-imac-computer-screen-606763/
+Two kids: https://pixabay.com/en/model-arsa-aroni-photography-956676/
+Photgrapher: https://pixabay.com/en/photographers-scenery-nature-1150033/
+Girl in header ad image: https://pixabay.com/en/mobile-phone-mobile-smartphone-791644/
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.html), version 3 or later.
 
