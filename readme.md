@@ -42,6 +42,10 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
+### Version 1.1
+* Fix layout issues with bootstrap row
+* Fix minor padding issues in widget areas
+
 ### Version 1.0.9
 * Changed footer widget color
 * Added Open Sans Font for title
