@@ -25,67 +25,74 @@
 
 			<div id="header-top">
 				<div  class="container">
-					<div class="pull-left info-icons">
+					<div class="row">
 
-						<ul>
-						<?php if(!empty($phone_info)):?>
-						<li><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
-						<?php endif;?>
+						<div class="info-icons col-md-6 col-sm-12 pull-left">
+							<ul>
+							<?php if(!empty($phone_info)):?>
+							<li><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
+							<?php endif;?>
 
-						<?php if(!empty($email_info)):?>
-						<li><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a></li>
-						<?php endif;?>
+							<?php if(!empty($email_info)):?>
+							<li><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a></li>
+							<?php endif;?>
 
-						<?php if(!empty($location_info)):?>
-						<li><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
-						<?php endif;?>
-						</ul>
+							<?php if(!empty($location_info)):?>
+							<li><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
+							<?php endif;?>
+							</ul>
 
-					</div>
+						</div>
 
-					<div class="pull-right social-icons">
-						<?php hybrid_get_menu( 'social-header' ); // Loads the menu/social-header.php template. ?>
+						<div class="social-icons col-md-6 col-sm-12 pull-right">
+							<?php hybrid_get_menu( 'social-header' ); // Loads the menu/social-header.php template. ?>
+						</div>
+
 					</div>
 				</div>
 			</div>
 
 			<div id="main-header" class="container">
+				<div class="row">
 
-				<div <?php hybrid_attr( 'branding' ); ?> class="pull-left header-left-section">
+					<div id="branding" class="site-branding col-md-4">
 
-					<?php if ( get_theme_mod( 'envince_logo' ) != "" ) : // If there's a logo?>
+						<?php if ( get_theme_mod( 'envince_logo' ) != "" ) : // If there's a logo?>
 
-					<div class="header-logo">
+						<div class="header-logo">
 
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'envince_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'envince_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
 
+						</div>
+
+						<?php endif; // End check for logo?>
+
+
+						<div class="header-text">
+						<?php
+						if ( get_theme_mod( 'envince_site_title', '1' ) == '1') {
+							hybrid_site_title();
+						}
+						if ( get_theme_mod( 'envince_site_description', '1' ) == '1') {
+							hybrid_site_description();
+						}
+						?>
+						</div>
+					</div><!-- #branding -->
+
+					<div class="header-right-section col-md-8 pull-right">
+						<?php hybrid_get_sidebar( 'header' ); // Loads the sidebar/header.php template. ?>
 					</div>
 
-					<?php endif; // End check for logo?>
-
-
-					<div class="header-text">
-					<?php
-					if ( get_theme_mod( 'envince_site_title', '1' ) == '1') {
-						hybrid_site_title();
-					}
-					if ( get_theme_mod( 'envince_site_description', '1' ) == '1') {
-						hybrid_site_description();
-					}
-					?>
-					</div>
-				</div><!-- #branding -->
-
-				<div class="pull-right header-right-section">
-					<?php hybrid_get_sidebar( 'header' ); // Loads the sidebar/header.php template. ?>
 				</div>
+			</div>
+
+			<div id="main-menu" class="clearfix">
+
+				<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 
 			</div>
-				<div id="main-menu" class="clearfix">
 
-					<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
-
-				</div>
 		</header><!-- #header -->
 
 		<?php if ( get_header_image() ) : // If there's a header image. ?>
@@ -98,4 +105,7 @@
 		<div id="#site-content" class="site-content clearfix">
 
 			<div class="container">
-				<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
+				<div class="row">
+					<div class="col-md-12">
+						<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
+					</div>

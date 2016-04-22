@@ -73,11 +73,6 @@ a:focus {
     outline-offset: -2px;
 }
 
-.container {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 h1,
 b .h1 {
     font-size: 32px;
@@ -912,12 +907,6 @@ p {
     box-shadow: rgba(0, 0, 0, 0.219608) 0 5px 7px;
 }
 
-#content {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
 /* Breadcrumbs */
 
 .breadcrumb-trail {
@@ -1120,7 +1109,7 @@ p {
 }
 
 .widget-area.col-sm-12.col-md-3 {
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 
@@ -1525,7 +1514,7 @@ li.recentcomments {
 #sidebar-primary .widget,
 #sidebar-secondary .widget {
     background-color: #fff;
-    padding: 5px 15px 5px 0;
+    padding: 5px 0;
 }
 
 .cat-item a {
@@ -2038,6 +2027,7 @@ p.logged-in-as {
     list-style: none;
     margin-bottom: 2px;
     margin-top: 0;
+    float: right;
 }
 
 #menu-social ul li {
