@@ -1210,10 +1210,6 @@ hr.section-divider {
     float: left !important;
 }
 
-.footer-block.col-md-3 {
-    padding-left: 5px;
-}
-
 .footer-block .textwidget {
     color: #dadada;
 }
@@ -1532,7 +1528,7 @@ li.recentcomments {
 }
 
 .widget-area.col-sm-12.col-md-4 {
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 
