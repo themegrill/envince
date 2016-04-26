@@ -43,6 +43,7 @@ Envince is distributed under the terms of the GNU GPL
 ## Changelog
 
 ### Version 1.1.1
+* Fixed Image uploader issue in TG: Advertisement widget on the Page via page Builder.
 
 ### Version 1.1
 * Fix layout issues with bootstrap row
