@@ -29,27 +29,31 @@ jQuery( document ).ready( function() {
 		function() {
 			var sg_input_type = 'input';
 			var sg_input_id   = jQuery( this ).attr( 'id' );
-			var sg_label      = '';
 
-			if ( jQuery( this ).is( 'input' ) )
+			if ( jQuery( this ).is( 'input' ) ) {
 				sg_input_type = jQuery( this ).attr( 'type' );
+			}
 
-			else if ( jQuery( this ).is( 'textarea' ) )
+			else if ( jQuery( this ).is( 'textarea' ) ) {
 				sg_input_type = 'textarea';
+			}
 
-			else if ( jQuery( this ).is( 'select' ) )
+			else if ( jQuery( this ).is( 'select' ) ) {
 				sg_input_type = 'select';
+			}
 
 			jQuery( this ).parent( 'label' ).addClass( 'label-' + sg_input_type );
 
-			if ( sg_input_id )
+			if ( sg_input_id ) {
 				jQuery( 'label[for="' + sg_input_id + '"]' ).addClass( 'label-' + sg_input_type );
+			}
 
 			if ( 'checkbox' === sg_input_type || 'radio' === sg_input_type ) {
 				jQuery( this ).parent( 'label' ).removeClass( 'font-secondary' ).addClass( 'font-primary' );
 
-				if ( sg_input_id )
+				if ( sg_input_id ) {
 					jQuery( 'label[for="' + sg_input_id + '"]' ).removeClass( 'font-secondary' ).addClass( 'font-primary' );
+				}
 
 			}
 		}
@@ -60,10 +64,12 @@ jQuery( document ).ready( function() {
 		function() {
 			var sg_focus_id   = jQuery( this ).attr( 'id' );
 
-			if ( sg_focus_id )
+			if ( sg_focus_id ) {
 				jQuery( 'label[for="' + sg_focus_id + '"]' ).toggleClass( 'focus' );
-			else
+			}
+			else {
 				jQuery( this ).parents( 'label' ).toggleClass( 'focus' );
+			}
 		}
 	);
 
@@ -165,7 +171,7 @@ jQuery( document ).ready( function() {
 	jQuery('.widget_rss ul').addClass('media-list');
 	jQuery('.postform, input, textarea').not('#respond input[type=submit]').addClass('form-control');
 	jQuery('table#wp-calendar').addClass('table table-striped');
-	jQuery('#submit, .tagcloud, button[type=submit], .comment-reply-link, .widget_rss ul, .postform, table#wp-calendar').show("fast");
+	jQuery('#submit, .tagcloud, button[type=submit], .comment-reply-link, .widget_rss ul, .postform, table#wp-calendar').show('fast');
 
     // Initialize bxslider
     if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
@@ -181,13 +187,13 @@ jQuery( document ).ready( function() {
 			pager: false,
 			tickerHover: true,
 			onSliderLoad: function(){
-				jQuery(".envince-slider-inner-wrapper").css("visibility", "visible");
+				jQuery('.envince-slider-inner-wrapper').css('visibility', 'visible');
 			}
 		});
 	}
 
 	// cache the window object
-	jQuerywindow = jQuery(window);
+	var jQuerywindow = jQuery(window);
 
 	jQuery('section[data-type="background"]').each(function(){
      // declare the variable to affect the defined data-type
