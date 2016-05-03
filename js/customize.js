@@ -4,7 +4,7 @@
 function envince_hex_to_rgb( hex ) {
 	var color = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec( hex );
 
-	return parseInt( color[1], 16 ) + ", " + parseInt( color[2], 16 ) + ", " + parseInt( color[3], 16 );
+	return parseInt( color[1], 16 ) + ', ' + parseInt( color[2], 16 ) + ', ' + parseInt( color[3], 16 );
 }
 
 /**
@@ -123,7 +123,7 @@ jQuery( document ).ready( function() {
 
 			/* background-color */
 
-			jQuery( "input[type='submit'], input[type='reset'], input[type='button'], button, .page-links a, .comment-reply-link, .comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a" ).
+			jQuery( 'input[type="submit"], input[type="reset"], input[type="button"], button, .page-links a, .comment-reply-link, .comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a' ).
 				css( 'background-color', 'rgba( ' + rgb + ', 0.8 )' );
 
 			jQuery( 'blockquote' ).
