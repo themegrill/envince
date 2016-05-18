@@ -45,6 +45,7 @@ Envince is distributed under the terms of the GNU GPL
 ### Version 1.1.1 - TBD
 * Fixed Image uploader issue in TG: Advertisement widget on the Page via page Builder.
 * Added option to remove featured image from single post
+* Allow empty values in header phone number settings
 
 ### Version 1.1
 * Fix layout issues with bootstrap row

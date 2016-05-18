@@ -421,6 +421,8 @@ function envince_customize_register( $wp_customize ) {
 function envince_sanitize_integer( $int ) {
 	if( is_numeric( $int ) ) {
 		return intval( $int );
+	} else {
+		return '';
 	}
 }
 
