@@ -241,12 +241,12 @@ function envince_customize_register( $wp_customize ) {
 			'section'  => 'envince_layout',
 			'type'     => 'select',
 			'choices'    => array(
-            	'1' => esc_html__('1 Footer Widget Area', 'envince'),
-            	'2' => esc_html__('2 Footer Widget Area', 'envince'),
-            	'3' => esc_html__('3 Footer Widget Area', 'envince'),
-            	'4' => esc_html__('4 Footer Widget Area', 'envince')
-        	),
- 		)
+				'1' => esc_html__('1 Footer Widget Area', 'envince'),
+				'2' => esc_html__('2 Footer Widget Area', 'envince'),
+				'3' => esc_html__('3 Footer Widget Area', 'envince'),
+				'4' => esc_html__('4 Footer Widget Area', 'envince')
+			),
+		)
 	);
 
 	/* Add 'header_info' section */
@@ -400,7 +400,7 @@ function envince_sanitize_integer( $int ) {
  * @return sanitized output
  */
 function envince_sanitize_text( $txt ) {
-    return wp_kses_post( force_balance_tags( $txt ) );
+	return wp_kses_post( force_balance_tags( $txt ) );
 }
 /**
  * Sanitize text
@@ -410,11 +410,11 @@ function envince_sanitize_text( $txt ) {
  * @return sanitized output
  */
 function envince_sanitize_checkbox( $input ) {
-    if ( $input == 1 ) {
-        return 1;
-    } else {
-        return '';
-    }
+	if ( $input == 1 ) {
+		return 1;
+	} else {
+		return '';
+	}
 }
 /**
  * Sanitize layout sidebar radiobutton
@@ -424,20 +424,20 @@ function envince_sanitize_checkbox( $input ) {
  * @return sanitized output
  */
 function envince_sanitize_layout_sidebar( $layout_sidebar ) {
-    $valid = array(
-        'full-width' 				=> 'full-width',
-        'sidebar-content' 			=> 'sidebar-content',
-        'content-sidebar' 			=> 'content-sidebar',
-        'sidebar-sidebar-content' 	=> 'sidebar-sidebar-content',
-        'sidebar-content-sidebar' 	=> 'sidebar-content-sidebar',
-        'content-sidebar-sidebar' 	=> 'content-sidebar-sidebar',
-    );
+	$valid = array(
+		'full-width' 				=> 'full-width',
+		'sidebar-content' 			=> 'sidebar-content',
+		'content-sidebar' 			=> 'content-sidebar',
+		'sidebar-sidebar-content' 	=> 'sidebar-sidebar-content',
+		'sidebar-content-sidebar' 	=> 'sidebar-content-sidebar',
+		'content-sidebar-sidebar' 	=> 'content-sidebar-sidebar',
+	);
 
-    if ( array_key_exists( $layout_sidebar, $valid ) ) {
-        return $layout_sidebar;
-    } else {
-        return '';
-    }
+	if ( array_key_exists( $layout_sidebar, $valid ) ) {
+		return $layout_sidebar;
+	} else {
+		return '';
+	}
 }
 
 /**
@@ -448,16 +448,16 @@ function envince_sanitize_layout_sidebar( $layout_sidebar ) {
  * @return sanitized output
  */
 function envince_sanitize_layout_style( $layout_style ) {
-    $valid = array(
-        'wide' 		=> 'Wide Layout',
+	$valid = array(
+		'wide' 		=> 'Wide Layout',
 		'boxed' 	=> 'Boxed Layout',
-    );
+	);
 
-    if ( array_key_exists( $layout_style, $valid ) ) {
-        return $layout_style;
-    } else {
-        return '';
-    }
+	if ( array_key_exists( $layout_style, $valid ) ) {
+		return $layout_style;
+	} else {
+		return '';
+	}
 }
 /**
  * Sanitize layout width
@@ -467,18 +467,18 @@ function envince_sanitize_layout_style( $layout_style ) {
  * @return sanitized output
  */
 function envince_sanitize_layout_width( $layout_width ) {
-    $valid = array(
-       '1600' => '1600px',
+	$valid = array(
+	   '1600' => '1600px',
 		'1170' => '1170px (Default)',
 		'992' => '992px',
 		'768' => '768px',
-    );
+	);
 
-    if ( array_key_exists( $layout_width, $valid ) ) {
-        return $layout_width;
-    } else {
-        return '';
-    }
+	if ( array_key_exists( $layout_width, $valid ) ) {
+		return $layout_width;
+	} else {
+		return '';
+	}
 }
 /**
  * Sanitize color option
