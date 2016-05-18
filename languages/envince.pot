@@ -4,13 +4,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Envince 1.1.1\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-05-03 07:24:38+00:00\n"
+"POT-Creation-Date: 2016-05-18 06:03:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language-Team: ThemeGrill Team <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
 #: comment/comment.php:7 comment/ping.php:6
@@ -23,14 +23,14 @@ msgid "Permalink"
 msgstr ""
 
 #: content/aside.php:28 content/audio.php:30 content/chat.php:36
-#: content/content.php:27 content/gallery.php:28 content/image.php:30
+#: content/content.php:31 content/gallery.php:28 content/image.php:30
 #: content/link.php:28 content/quote.php:17 content/status.php:25
 #: content/video.php:30
 msgid "Posted in %s"
 msgstr ""
 
 #: content/aside.php:29 content/audio.php:31 content/chat.php:37
-#: content/content.php:28 content/gallery.php:29 content/image.php:31
+#: content/content.php:32 content/gallery.php:29 content/image.php:31
 #: content/link.php:29 content/quote.php:18 content/status.php:26
 #: content/video.php:31
 msgid "Tagged %s"
@@ -187,6 +187,14 @@ msgstr ""
 
 #: inc/admin/customize.php:371
 msgid "%s"
+msgstr ""
+
+#: inc/admin/customize.php:385
+msgid "Miscellaneous Settings"
+msgstr ""
+
+#: inc/admin/customize.php:406
+msgid "Remove Featured Image from Single Post"
 msgstr ""
 
 #: inc/admin/metabox.php:24
@@ -617,43 +625,43 @@ msgstr ""
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/theme.php:102
+#: inc/theme.php:99
 msgid ""
 "Main Sidebar used in both two column and three column layout. Generally "
 "present in Right section."
 msgstr ""
 
-#: inc/theme.php:110
+#: inc/theme.php:107
 msgid "Secondary Sidebar used in three column layout only."
 msgstr ""
 
-#: inc/theme.php:118
+#: inc/theme.php:115
 msgid ""
 "Header Sidebar located in the right section beside the site title and above "
 "the menu."
 msgstr ""
 
-#: inc/theme.php:126
+#: inc/theme.php:123
 msgid "Magazine Template Content Area Sidebar."
 msgstr ""
 
-#: inc/theme.php:134
+#: inc/theme.php:131
 msgid "Magazine Template Top Sidebar."
 msgstr ""
 
-#: inc/theme.php:142
+#: inc/theme.php:139
 msgid "Footer Sidebar 1"
 msgstr ""
 
-#: inc/theme.php:150
+#: inc/theme.php:147
 msgid "Footer Sidebar 2"
 msgstr ""
 
-#: inc/theme.php:158
+#: inc/theme.php:155
 msgid "Footer Sidebar 3"
 msgstr ""
 
-#: inc/theme.php:166
+#: inc/theme.php:163
 msgid "Footer Sidebar 4"
 msgstr ""
 
@@ -950,62 +958,62 @@ msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Activate %2$s"
 msgstr ""
 
-#: inc/theme.php:84
+#: inc/theme.php:81
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: inc/theme.php:85
+#: inc/theme.php:82
 msgctxt "nav menu location"
 msgid "Header Social"
 msgstr ""
 
-#: inc/theme.php:86
+#: inc/theme.php:83
 msgctxt "nav menu location"
 msgid "Footer Social"
 msgstr ""
 
-#: inc/theme.php:101
+#: inc/theme.php:98
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: inc/theme.php:109
+#: inc/theme.php:106
 msgctxt "sidebar"
 msgid "Secondary"
 msgstr ""
 
-#: inc/theme.php:117
+#: inc/theme.php:114
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: inc/theme.php:125
+#: inc/theme.php:122
 msgctxt "sidebar"
 msgid "Mag: Content Section"
 msgstr ""
 
-#: inc/theme.php:133
+#: inc/theme.php:130
 msgctxt "sidebar"
 msgid "Mag: Top Section"
 msgstr ""
 
-#: inc/theme.php:141
+#: inc/theme.php:138
 msgctxt "sidebar"
 msgid "Footer 1"
 msgstr ""
 
-#: inc/theme.php:149
+#: inc/theme.php:146
 msgctxt "sidebar"
 msgid "Footer 2"
 msgstr ""
 
-#: inc/theme.php:157
+#: inc/theme.php:154
 msgctxt "sidebar"
 msgid "Footer 3"
 msgstr ""
 
-#: inc/theme.php:165
+#: inc/theme.php:162
 msgctxt "sidebar"
 msgid "Footer 4"
 msgstr ""
