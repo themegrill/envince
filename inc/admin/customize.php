@@ -377,6 +377,38 @@ function envince_customize_register( $wp_customize ) {
 		);
 		$i++;
 	}
+
+	/* Add 'miscellaneous settings' section */
+	$wp_customize->add_section(
+		'envince_miscellaneous',
+		array(
+			'title'      => esc_html__( 'Miscellaneous Settings', 'envince' ),
+			'priority'   => 100,
+			'capability' => 'edit_theme_options'
+		)
+	);
+
+	/* Add the 'featured image setting for single post/page' setting. */
+	$wp_customize->add_setting(
+		'estore_remove_featured_image',
+		array(
+			'default'  			   => '',
+			'capability'           => 'edit_theme_options',
+			'transport'            => 'postMessage',
+			'sanitize_callback'	   => 'envince_sanitize_checkbox',
+		)
+	);
+
+	/* Add 'remove featured image' control. */
+	$wp_customize->add_control(
+		'estore_remove_featured_image',
+		array(
+			'label'    => esc_html__( 'Remove Featured Image from Single Post', 'envince' ),
+			'section'  => 'envince_miscellaneous',
+			'settings' => 'estore_remove_featured_image',
+			'type'     => 'checkbox'
+		)
+	);
 } // customizer section end
 
 /**

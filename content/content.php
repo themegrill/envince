@@ -5,7 +5,11 @@
 		<header class="entry-header">
 
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
-			<?php get_the_image( array( 'size' => 'envince-large', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'featured', 'scan_raw', 'scan', 'attachment' ) ) ); ?>
+			<?php
+			if( get_theme_mod( 'estore_remove_featured_image', '' ) != '1') :
+				get_the_image( array( 'size' => 'envince-large', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'featured', 'scan_raw', 'scan', 'attachment' ) ) );
+			endif;
+			?>
 			<div class="entry-byline">
 				<i class="fa fa-user"></i>
 				<span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
