@@ -97,10 +97,10 @@ class envince_728x90_advertisement_widget extends WP_Widget {
 			$output .= '<div class="advertisement-content">';
 			if ( !empty( $image_link ) ) {
 				$output .= '<a href="'.$image_link.'" class="single_ad_728x90" target="_blank">
-								<img src="'.$image_url.'" width="728" height="90">
+								<img src="'.$image_url.'" />
 							</a>';
 			} else {
-				$output .= '<img src="'.$image_url.'" width="728" height="90">';
+				$output .= '<img src="'.$image_url.'" />';
 			}
 			$output .= '</div>';
 			echo $output;
