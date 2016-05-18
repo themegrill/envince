@@ -18,9 +18,6 @@ add_action( 'wp_enqueue_scripts', 'envince_enqueue_styles', 5 );
 /* Excerpt-related filters. */
 add_filter( 'excerpt_length', 'envince_excerpt_length' );
 
-/* Adds custom attributes to the footer sidebar. */
-add_filter( 'hybrid_attr_sidebar', 'envince_sidebar_footer_class', 10, 2 );
-
 /* Filters the calendar output. */
 add_filter( 'get_calendar', 'envince_get_calendar' );
 
@@ -223,6 +220,7 @@ function envince_enqueue_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
+if ( ! function_exists( 'envince_excerpt_length' ) ) :
 /**
  * Adds a custom excerpt length.
  *
@@ -232,9 +230,11 @@ function envince_enqueue_styles() {
  * @return int
  */
 function envince_excerpt_length( $length ) {
-	return 71;
+	return 70;
 }
+endif;
 
+if ( ! function_exists( 'envince_trim_excerpt' ) ) :
 /**
  * Removes the [..] sign/symbol for excerpt.
  *
@@ -246,45 +246,9 @@ function envince_excerpt_length( $length ) {
 function envince_trim_excerpt($text) {
   return '';
 }
+endif;
+
 add_filter('excerpt_more', 'envince_trim_excerpt');
-
-/**
- * Adds a custom class to the 'footer' sidebar.  This is used to determine the number of columns used to
- * display the sidebar's widgets.  This optimizes for 1, 2, and 3 columns or multiples of those values.
- *
- * Note that we're using the global $sidebars_widgets variable here. This is because core has marked
- * wp_get_sidebars_widgets() as a private function. Therefore, this leaves us with $sidebars_widgets for
- * figuring out the widget count.
- * @link http://codex.wordpress.org/Function_Reference/wp_get_sidebars_widgets
- *
- * @since  1.0.0
- * @access public
- * @param  array  $attr
- * @param  string $context
- * @return array
- */
-function envince_sidebar_footer_class( $attr, $context ) {
-
-	if ( 'subsidiary' === $context ) {
-		global $sidebars_widgets;
-
-		if ( is_array( $sidebars_widgets ) && !empty( $sidebars_widgets[ $context ] ) ) {
-
-			$count = count( $sidebars_widgets[ $context ] );
-
-			if ( 1 === $count )
-				$attr['class'] .= ' sidebar-col-1';
-
-			elseif ( !( $count % 3 ) || $count % 2 )
-				$attr['class'] .= ' sidebar-col-3';
-
-			elseif ( !( $count % 2 ) )
-				$attr['class'] .= ' sidebar-col-2';
-		}
-	}
-
-	return $attr;
-}
 
 /**
  * Turns the IDs into classes for the calendar.
@@ -367,35 +331,35 @@ $layout_global = get_theme_mod('envince_sidebar','content-sidebar');
  * @link http://justintadlock.com/archives/2011/07/01/captions-in-wordpress
  */
 function envince_caption($output, $attr, $content) {
-  if (is_feed()) {
-    return $output;
-  }
+	if (is_feed()) {
+		return $output;
+	}
 
-  $defaults = array(
-    'id'      => '',
-    'align'   => 'alignnone',
-    'width'   => '',
-    'caption' => ''
-  );
+	$defaults = array(
+		'id'      => '',
+		'align'   => 'alignnone',
+		'width'   => '',
+		'caption' => ''
+	);
 
-  $attr = shortcode_atts($defaults, $attr);
+	$attr = shortcode_atts($defaults, $attr);
 
-  // If the width is less than 1 or there is no caption, return the content wrapped between the [caption] tags
-  if ($attr['width'] < 1 || empty($attr['caption'])) {
-    return $content;
-  }
+	// If the width is less than 1 or there is no caption, return the content wrapped between the [caption] tags
+	if ($attr['width'] < 1 || empty($attr['caption'])) {
+		return $content;
+	}
 
-  // Set up the attributes for the caption <figure>
-  $attributes  = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '' );
-  $attributes .= ' class="thumbnail wp-caption ' . esc_attr($attr['align']) . '"';
-  $attributes .= ' style="width: ' . (esc_attr($attr['width']) + 10) . 'px"';
+	// Set up the attributes for the caption <figure>
+	$attributes  = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '' );
+	$attributes .= ' class="thumbnail wp-caption ' . esc_attr($attr['align']) . '"';
+	$attributes .= ' style="width: ' . (esc_attr($attr['width']) + 10) . 'px"';
 
-  $output  = '<figure' . $attributes .'>';
-  $output .= do_shortcode($content);
-  $output .= '<figcaption class="caption wp-caption-text">' . $attr['caption'] . '</figcaption>';
-  $output .= '</figure>';
+	$output  = '<figure' . $attributes .'>';
+	$output .= do_shortcode($content);
+	$output .= '<figcaption class="caption wp-caption-text">' . $attr['caption'] . '</figcaption>';
+	$output .= '</figure>';
 
-  return $output;
+	return $output;
 }
 
 /**
