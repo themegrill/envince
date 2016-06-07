@@ -2086,6 +2086,10 @@ p.logged-in-as {
     background-color: #d62408 !important;
 }
 
+#menu-social li a[href*="plus.google.com"]:hover {
+    background-color: #00C8FF !important;
+}
+
 #menu-social li a[href*="github.com"] {
     background-color: #999 !important;
 }
