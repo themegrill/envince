@@ -1712,13 +1712,6 @@ button:hover {
     padding-bottom: 10px;
 }
 
-.navbar > .container .navbar-brand {
-    color: #DADADA;
-    font-size: 20px;
-    margin: 13px 0;
-    font-family: 'Roboto Slab', serif;
-}
-
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
