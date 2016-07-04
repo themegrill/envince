@@ -2329,6 +2329,9 @@ p.logged-in-as {
     left: 0;
     margin-left: 2px;
 }
+.slider-featured-image a img {
+  width: 100%;
+}
 
 .widget_featured_post_slider .col-md-6,
 .widget_featured_post_slider .entry {
