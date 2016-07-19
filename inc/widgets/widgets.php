@@ -259,15 +259,20 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 							</header>
 						</article>
 					</div>
-					<?php }
+					<?php 
+						if ( $slide_counter%5 == 0 ) {
+							echo "</div>";
+						} // wrapper for small grid
+					}
 					if( $slide_counter%5 == 0 ) { ?>
 				</div>
-			</div>
-				<?php }
+				<?php 
+				}
 				endwhile;
 				// Reset Post Data
 				wp_reset_query();
 				?>
+			</div>
 		</div>
 		<?php echo $after_widget;
 	}
