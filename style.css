@@ -2,7 +2,7 @@
  * Theme Name:  Envince
  * Theme URI:   http://themegrill.com/themes/envince/
  * Description: Envince is bootstrap 3 powered magazine wp theme to make your site look good. Create powerful magazine site with drag and drop editing features. Get free support here: http://themegrill.com/support-forum/forum/envince-free/ and check demo here: http://demo.themegrill.com/envince
- * Version:     1.1.1
+ * Version:     1.1.2
  * Author:      ThemeGrill
  * Author URI:  http://themegrill.com
  * Tags:        light, white, one-column, two-columns, three-columns, custom-background, custom-header, custom-menu, custom-colors, featured-images, left-sidebar, sticky-post, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready
@@ -1712,13 +1712,6 @@ button:hover {
     padding-bottom: 10px;
 }
 
-.navbar > .container .navbar-brand {
-    color: #DADADA;
-    font-size: 20px;
-    margin: 13px 0;
-    font-family: 'Roboto Slab', serif;
-}
-
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
@@ -2086,6 +2079,10 @@ p.logged-in-as {
     background-color: #d62408 !important;
 }
 
+#menu-social li a[href*="plus.google.com"]:hover {
+    background-color: #00C8FF !important;
+}
+
 #menu-social li a[href*="github.com"] {
     background-color: #999 !important;
 }
@@ -2331,6 +2328,9 @@ p.logged-in-as {
 .envince-featured-post-slider span.entry-category.color-category {
     left: 0;
     margin-left: 2px;
+}
+.slider-featured-image a img {
+  width: 100%;
 }
 
 .widget_featured_post_slider .col-md-6,
