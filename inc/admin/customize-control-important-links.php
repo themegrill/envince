@@ -7,6 +7,10 @@ class Envince_Important_Links extends WP_Customize_Control {
 	public function render_content() {
 		//Add Theme instruction, Support Forum, Demo Link, Rating Link
 		$important_links = array(
+			'view-pro' => array(
+				'link' => esc_url('http://themegrill.com/themes/envince/'),
+				'text' => esc_html__('View Pro', 'envince'),
+			),
 			'theme-info' => array(
 				'link' => esc_url('http://themegrill.com/themes/envince/'),
 				'text' => esc_html__('Theme Info', 'envince'),
