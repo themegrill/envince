@@ -42,6 +42,10 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
+### Version 1.1.3 - 2016-07-21
+* Introduced about page for theme information
+* Added RTL Language Support
+
 ### Version 1.1.2 - 2016-06-21
 * Fixed layout issue caused due to <div> on slider widget
 
