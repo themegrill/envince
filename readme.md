@@ -42,6 +42,9 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
+## Version - TBD
+* Tweaks - Enhancement for the media uploader scripts used in widgets.
+
 ### Version 1.1.3 - 2016-07-21
 * Introduced about page for theme information
 * Added RTL Language Support
