@@ -29,6 +29,11 @@ require_once( $envince_dir . 'library/hybrid.php'        );
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
+/* Load the About page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-envince-admin.php';
+}
+
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'envince_theme_setup', 5 );
 
