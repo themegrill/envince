@@ -6,16 +6,21 @@
 
 		<footer class="site-footer" <?php hybrid_attr( 'footer' ); ?>>
 
+		<?php
+		if( is_active_sidebar( 'footer1' ) || is_active_sidebar( 'footer2' ) || is_active_sidebar( 'footer3' ) || is_active_sidebar( 'footer4' ) ) { ?>
+
 			<div class="footer-widget">
 
-				<div class="container">
-					<div class="row">
+					<div class="container">
+						<div class="row">
 
-						<?php hybrid_get_sidebar( 'subsidiary' ); // Loads the sidebar/subsidiary.php template. ?>
+							<?php hybrid_get_sidebar( 'subsidiary' ); // Loads the sidebar/subsidiary.php template. ?>
+						</div>
 					</div>
+
 				</div>
 
-			</div>
+		<?php } ?>
 
 			<div class="container">
 				<div class="row">
