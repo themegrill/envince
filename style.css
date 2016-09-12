@@ -1659,15 +1659,6 @@ button:hover {
 /* =Navigation
 ----------------------------------------------- */
 
-.site-content [class*="navigation"] a {
-    border: 1px solid #DADADA;
-    background-color: #fff;
-    padding: 8px 14px;
-    font-size: 12px;
-    margin: 0 0 1.5em;
-    overflow: hidden;
-}
-
 .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
@@ -1679,12 +1670,6 @@ button:hover {
 
 .nav.navbar-nav.main-nav {
     font-weight: 600;
-}
-
-.site-content [class*="navigation"] a:hover {
-    color: #fff;
-    background: #DA4453;
-    text-decoration: none;
 }
 
 [class*="navigation"] .nav-previous {
