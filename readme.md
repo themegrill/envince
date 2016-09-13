@@ -42,8 +42,10 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
-## Version - TBD
+### Version 1.1.4 - 2016-09-13
 * Tweaks - Enhancement for the media uploader scripts used in widgets.
+* Tweaks - Allows link in menu with childern items
+* Tweaks - Show footer div only if widgets exist
 
 ### Version 1.1.3 - 2016-07-21
 * Introduced about page for theme information
