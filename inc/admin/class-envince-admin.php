@@ -131,7 +131,7 @@ class Envince_Admin {
 
 			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'http://themegrill.com/themes/envince/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/envince?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'envince' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/envince/reviews/?rate=5#new-post' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'envince' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
