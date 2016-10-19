@@ -42,6 +42,11 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
+### Version 1.1.5 - 2016-10-19
+* Fixed - Dropdown category menu for Bootstrap nav walker.
+* Tweaks - Updated Font Awessome to `v.4.6.3` for new icon  support.
+* Tweaks - Updated Bootstrap to `v3.3.7`.
+
 ### Version 1.1.4 - 2016-09-13
 * Tweaks - Enhancement for the media uploader scripts used in widgets.
 * Tweaks - Allows link in menu with childern items
