@@ -2,6 +2,11 @@
 
 You can see the changes made via the [commit log](https://github.com/justintadlock/hybrid-core/commits/master) for the latest release.
 
+## [3.0.1] - TBD
+* Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
+
+### Added
+
 ## [3.0.0] - 2015-08-17
 
 ### Added
