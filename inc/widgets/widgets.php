@@ -259,14 +259,14 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 							</header>
 						</article>
 					</div>
-					<?php 
+					<?php
 						if ( $slide_counter%5 == 0 ) {
 							echo "</div>";
 						} // wrapper for small grid
 					}
 					if( $slide_counter%5 == 0 ) { ?>
 				</div>
-				<?php 
+				<?php
 				}
 				endwhile;
 				// Reset Post Data
@@ -700,7 +700,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		}
 		echo $before_widget;
 		?>
-
+		<div class="row no-gutter">
 		<?php
 		if ( $type != 'latest' ) {
 			$border_color = 'style="border-bottom-color:' . envince_category_color( $category ) . ';"';
@@ -749,7 +749,8 @@ class envince_imagegrid_posts extends WP_Widget {
 		// Reset Post Data
 		wp_reset_query();
 		?>
-	</div>
+		</div>
+		</div><!-- .no-gutter -->
 	<?php echo $after_widget;
 	}
 }
