@@ -88,7 +88,14 @@ function print_custom_css() {
 		}';
 		}
 		/* Put the final style output together. */
-		$style = "\n" . '<style type="text/css" id="custom-css">' .$custom_css. "\n" .trim( get_theme_mod( 'envince_custom_css' ) ) . '</style>' . "\n";
+		$envince_custom_css_value = '';
+		$envince_custom_css = get_theme_mod( 'envince_custom_css' );
+		if( $envince_custom_css && ! function_exists( 'wp_update_custom_css_post' ) ) {
+			$envince_custom_css_value = $envince_custom_css;
+		}
+
+
+		$style = "\n" . '<style type="text/css" id="custom-css">' .$custom_css. "\n" .trim( $envince_custom_css_value ) . '</style>' . "\n";
 
 		/* Cache the style, so we don't have to process this on each page load. */
 		wp_cache_set( 'envince_custom_css', $style );
@@ -107,41 +114,43 @@ function print_custom_css() {
  */
 function envince_customize_css_register( $wp_customize ) {
 
-	/* Add the section. */
-	$wp_customize->add_section(
-		'envince_custom',
-		array(
-			'title'      => esc_html__( 'Custom CSS', 'envince' ),
-			'priority'   => 200,
-			'capability' => 'edit_theme_options'
-		)
-	);
+	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+		/* Add the section. */
+		$wp_customize->add_section(
+			'envince_custom',
+			array(
+				'title'      => esc_html__( 'Custom CSS', 'envince' ),
+				'priority'   => 200,
+				'capability' => 'edit_theme_options'
+			)
+		);
 
-	/* Add the 'custom_css' setting. */
-	$wp_customize->add_setting(
-		'envince_custom_css',
-		array(
-			'default'              => '',
-			'type'                 => 'theme_mod',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'custom_css_sanitize',
-			'transport'            => 'postMessage',
-		)
-	);
-
-	/* Add the textarea control for the 'custom_css' setting. */
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
+		/* Add the 'custom_css' setting. */
+		$wp_customize->add_setting(
 			'envince_custom_css',
 			array(
-				'label'    => '',
-				'type'     => 'textarea',
-				'section'  => 'envince_custom',
-				'settings' => 'envince_custom_css',
+				'default'              => '',
+				'type'                 => 'theme_mod',
+				'capability'           => 'edit_theme_options',
+				'sanitize_callback'    => 'custom_css_sanitize',
+				'transport'            => 'postMessage',
 			)
-		)
-	);
+		);
+
+		/* Add the textarea control for the 'custom_css' setting. */
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'envince_custom_css',
+				array(
+					'label'    => '',
+					'type'     => 'textarea',
+					'section'  => 'envince_custom',
+					'settings' => 'envince_custom_css',
+				)
+			)
+		);
+	}
 
 	/* If viewing the customize preview screen, add a script to show a live preview. */
 	if ( $wp_customize->is_preview() && !is_admin() ) {
@@ -184,4 +193,21 @@ function custom_css_sanitize($value) {
 	return stripslashes( wp_filter_post_kses( addslashes( $value ) ) );
 
 }
-?>
+
+/**
+* Migrate any existing theme CSS codes added in Customize Options to the core option added in WordPress 4.7
+*/
+function envince_custom_css_migrate() {
+if ( function_exists( 'wp_update_custom_css_post' ) ) {
+	$custom_css = get_theme_mod( 'envince_custom_css' );
+	if ( $custom_css ) {
+		$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
+		$return = wp_update_custom_css_post( $core_css . $custom_css );
+		if ( ! is_wp_error( $return ) ) {
+			// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
+			remove_theme_mod( 'envince_custom_css' );
+		}
+	}
+}
+}
+add_action( 'after_setup_theme', 'envince_custom_css_migrate' );
