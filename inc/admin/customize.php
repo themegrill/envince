@@ -115,29 +115,31 @@ function envince_customize_register( $wp_customize ) {
 		)
 	);
 
-	/* Add the 'logo' upload setting. */
-	$wp_customize->add_setting(
-		'envince_logo',
-		array(
-			'default'  			   => '',
-			'capability'           => 'edit_theme_options',
-			'transport'            => 'postMessage',
-			'sanitize_callback'	   => 'esc_url_raw',
-		)
-	);
-
-	/* Add the upload control for the 'envince_logo' setting. */
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
+	if ( ! function_exists('the_custom_logo') ) {
+		/* Add the 'logo' upload setting. */
+		$wp_customize->add_setting(
 			'envince_logo',
 			array(
-				'label'    => esc_html__( 'Logo Upload', 'envince' ),
-				'section'  => 'title_tagline',
-				'settings' => 'envince_logo',
+				'default'  			   => '',
+				'capability'           => 'edit_theme_options',
+				'transport'            => 'postMessage',
+				'sanitize_callback'	   => 'esc_url_raw',
 			)
-		)
-	);
+		);
+
+		/* Add the upload control for the 'envince_logo' setting. */
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'envince_logo',
+				array(
+					'label'    => esc_html__( 'Logo Upload', 'envince' ),
+					'section'  => 'title_tagline',
+					'settings' => 'envince_logo',
+				)
+			)
+		);
+	}
 
 	/* Add 'layout' section */
 	$wp_customize->add_section(

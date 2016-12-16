@@ -42,6 +42,9 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
+### Version 1.1.6 - TBD
+* Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
+
 ### Version 1.1.5 - 2016-10-19
 * Fixed - Dropdown category menu for Bootstrap nav walker.
 * Tweaks - Updated Font Awessome to `v.4.6.3` for new icon  support.

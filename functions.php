@@ -86,6 +86,14 @@ function envince_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
+	/* Adds the support for the Custom Logo introduced in WordPress 4.5 */
+	add_theme_support( 'custom-logo',
+	   array(
+	      'flex-width' => true,
+	      'flex-height' => true,
+	   )
+	);
+
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1280 );
 }
@@ -128,3 +136,34 @@ function envince_scripts() {
 	);
 
 }
+
+/* Displays the site logo */
+ if ( ! function_exists( 'envince_the_custom_logo' ) ) {
+ 	/**
+ 	 * Displays the optional custom logo.
+ 	 */
+ 	function envince_the_custom_logo() {
+ 		if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'envince_logo','' ) == '') ) {
+ 			the_custom_logo();
+ 		}
+ 	}
+ }
+
+/**
+ * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
+ */
+function envince_site_logo_migrate() {
+	if ( function_exists( 'the_custom_logo' ) && ! has_custom_logo( $blog_id = 0 ) ) {
+		$logo_url = get_theme_mod( 'envince_logo' );
+
+		if ( $logo_url ) {
+			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
+			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
+
+			// Delete the old Site Logo theme_mod option.
+			remove_theme_mod( 'envince_logo' );
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'envince_site_logo_migrate' );

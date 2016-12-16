@@ -57,15 +57,21 @@
 
 					<div id="branding" class="site-branding col-md-4">
 
-						<?php if ( get_theme_mod( 'envince_logo' ) != "" ) : // If there's a logo?>
+
 
 						<div class="header-logo">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'envince_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+							<?php if ( ( get_theme_mod( 'envince_logo' ) != "" ) && ( ! function_exists( 'the_custom_logo' ) ) ) : // If there's a logo?>
+
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'envince_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+							<?php endif; // End check for logo
+
+							if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) )
+								envince_the_custom_logo();
+							?>
 
 						</div>
 
-						<?php endif; // End check for logo?>
 
 
 						<div class="header-text">
