@@ -700,7 +700,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		}
 		echo $before_widget;
 		?>
-		<div class="row no-gutter">
+		<div class="no-gutter">
 		<?php
 		if ( $type != 'latest' ) {
 			$border_color = 'style="border-bottom-color:' . envince_category_color( $category ) . ';"';

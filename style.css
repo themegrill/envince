@@ -1530,7 +1530,12 @@ li.recentcomments {
 .widget-area.col-sm-12.col-md-4 {
     padding-top: 20px;
 }
-
+.no-gutter .single-article {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    width: 49%;
+}
 
 /* Icons on Widget Title */
 
@@ -2253,6 +2258,12 @@ p.logged-in-as {
         line-height: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+}
+
+@media(max-width: 600px) {
+    .no-gutter .single-article {
+        width: 100%;
     }
 }
 
