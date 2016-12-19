@@ -130,10 +130,12 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 		$envince_defaults['number']     = 5;
 		$envince_defaults['type']       = 'latest';
 		$envince_defaults['category']   = '';
+		$envince_defaults['child_category'] = '0';
 		$instance                       = wp_parse_args( (array) $instance, $envince_defaults );
 		$number                         = $instance['number'];
 		$type                           = $instance['type'];
 		$category                       = $instance['category'];
+		$child_category 				= $instance[ 'child_category' ] ? 'checked="checked"' : '';
 	?>
 	<p>
 		<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e( 'Number of posts to display:', 'envince' ); ?></label>
@@ -155,6 +157,11 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 			);
 		?>
 	</p>
+
+	<p>
+		<input class="checkbox" <?php echo $child_category; ?> id="<?php echo $this->get_field_id( 'child_category' ); ?>" name="<?php echo $this->get_field_name( 'child_category' ); ?>" type="checkbox" />
+		<label for="<?php echo $this->get_field_id('child_category'); ?>"><?php esc_html_e( 'Check to display the posts from child category of the chosen category.', 'envince' ); ?></label>
+	</p>
 	<?php
 
 	}
@@ -164,6 +171,7 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 		$instance[ 'number' ]   = absint( $new_instance[ 'number' ] );
 		$instance[ 'type' ]     = $new_instance[ 'type' ];
 		$instance[ 'category' ] = $new_instance[ 'category' ];
+		$instance[ 'child_category' ] = isset( $new_instance[ 'child_category' ] ) ? 1 : 0;
 
 		return $instance;
 	}
@@ -176,6 +184,7 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 		$number   = empty( $instance[ 'number' ] ) ? 4 : $instance[ 'number' ];
 		$type     = isset( $instance[ 'type' ] ) ? $instance[ 'type' ] : 'latest' ;
 		$category = isset( $instance[ 'category' ] ) ? $instance[ 'category' ] : '';
+		$child_category = !empty( $instance[ 'child_category' ] ) ? 'true' : 'false';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query(
@@ -187,14 +196,23 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 				)
 			);
 		} else {
-			$get_featured_posts = new WP_Query(
-				array(
+			if ( $child_category == 'true' ) {
+				$get_featured_posts = new WP_Query( array(
 					'posts_per_page'        => $number,
-					'post_type'             => 'post',
-					'category__in'          => $category,
-					'no_found_rows'         => true
-				)
-			);
+		            'post_type'             => 'post',
+		            'cat'          			=> $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			} else {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'category__in'          => $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			}
 		}
 		echo $before_widget;
 		?>
@@ -300,6 +318,7 @@ class envince_twocol_posts extends WP_Widget {
 		$envince_defaults['number']   = 4;
 		$envince_defaults['type']     = 'latest';
 		$envince_defaults['category'] = '';
+		$envince_defaults['child_category'] = '0';
 
 		$instance = wp_parse_args( (array) $instance, $envince_defaults );
 		$title    = esc_attr( $instance[ 'title' ] );
@@ -307,6 +326,7 @@ class envince_twocol_posts extends WP_Widget {
 		$number   = $instance['number'];
 		$type     = $instance['type'];
 		$category = $instance['category'];
+		$child_category 				= $instance[ 'child_category' ] ? 'checked="checked"' : '';
 	?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'envince' ); ?></label>
@@ -329,6 +349,11 @@ class envince_twocol_posts extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Select category', 'envince' ); ?>:</label>
 			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
 		</p>
+
+		<p>
+			<input class="checkbox" <?php echo $child_category; ?> id="<?php echo $this->get_field_id( 'child_category' ); ?>" name="<?php echo $this->get_field_name( 'child_category' ); ?>" type="checkbox" />
+			<label for="<?php echo $this->get_field_id('child_category'); ?>"><?php esc_html_e( 'Check to display the posts from child category of the chosen category.', 'envince' ); ?></label>
+		</p>
 		<?php
 	}
 
@@ -344,6 +369,7 @@ class envince_twocol_posts extends WP_Widget {
 		$instance[ 'number' ]   = absint( $new_instance[ 'number' ] );
 		$instance[ 'type' ]     = $new_instance[ 'type' ];
 		$instance[ 'category' ] = $new_instance[ 'category' ];
+		$instance[ 'child_category' ] = isset( $new_instance[ 'child_category' ] ) ? 1 : 0;
 
 		return $instance;
 	}
@@ -358,6 +384,7 @@ class envince_twocol_posts extends WP_Widget {
 		$number   = empty( $instance[ 'number' ] ) ? 4 : $instance[ 'number' ];
 		$type     = isset( $instance[ 'type' ] ) ? $instance[ 'type' ] : 'latest' ;
 		$category = isset( $instance[ 'category' ] ) ? $instance[ 'category' ] : '';
+		$child_category = !empty( $instance[ 'child_category' ] ) ? 'true' : 'false';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query(
@@ -369,12 +396,23 @@ class envince_twocol_posts extends WP_Widget {
 			);
 		}
 		else {
-			$get_featured_posts = new WP_Query( array(
-				'posts_per_page'        => $number,
-				'post_type'             => 'post',
-				'category__in'          => $category
-				)
-			);
+			if ( $child_category == 'true' ) {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'cat'          			=> $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			} else {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'category__in'          => $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			}
 		}
 		echo $before_widget;
 		?>
@@ -461,6 +499,7 @@ class envince_onecol_posts extends WP_Widget {
 		$envince_defaults['number']   = 4;
 		$envince_defaults['type']     = 'latest';
 		$envince_defaults['category'] = '';
+		$envince_defaults['child_category'] = '0';
 
 		$instance = wp_parse_args( (array) $instance, $envince_defaults );
 		$title    = esc_attr( $instance[ 'title' ] );
@@ -468,6 +507,7 @@ class envince_onecol_posts extends WP_Widget {
 		$number   = $instance['number'];
 		$type     = $instance['type'];
 		$category = $instance['category'];
+		$child_category 				= $instance[ 'child_category' ] ? 'checked="checked"' : '';
 	?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'envince' ); ?></label>
@@ -490,6 +530,12 @@ class envince_onecol_posts extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Select category', 'envince' ); ?>:</label>
 			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
 		</p>
+
+		<p>
+			<input class="checkbox" <?php echo $child_category; ?> id="<?php echo $this->get_field_id( 'child_category' ); ?>" name="<?php echo $this->get_field_name( 'child_category' ); ?>" type="checkbox" />
+			<label for="<?php echo $this->get_field_id('child_category'); ?>"><?php esc_html_e( 'Check to display the posts from child category of the chosen category.', 'envince' ); ?></label>
+		</p>
+
 		<?php
 	}
 
@@ -505,6 +551,7 @@ class envince_onecol_posts extends WP_Widget {
 		$instance[ 'number' ]   = absint( $new_instance[ 'number' ] );
 		$instance[ 'type' ]     = $new_instance[ 'type' ];
 		$instance[ 'category' ] = $new_instance[ 'category' ];
+		$instance[ 'child_category' ] = isset( $new_instance[ 'child_category' ] ) ? 1 : 0;
 
 		return $instance;
 	}
@@ -519,6 +566,7 @@ class envince_onecol_posts extends WP_Widget {
 		$number   = empty( $instance[ 'number' ] ) ? 4 : $instance[ 'number' ];
 		$type     = isset( $instance[ 'type' ] ) ? $instance[ 'type' ] : 'latest' ;
 		$category = isset( $instance[ 'category' ] ) ? $instance[ 'category' ] : '';
+		$child_category = !empty( $instance[ 'child_category' ] ) ? 'true' : 'false';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query(
@@ -530,12 +578,23 @@ class envince_onecol_posts extends WP_Widget {
 			);
 		}
 		else {
-			$get_featured_posts = new WP_Query( array(
-				'posts_per_page'        => $number,
-				'post_type'             => 'post',
-				'category__in'          => $category
-				)
-			);
+			if ( $child_category == 'true' ) {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'cat'          			=> $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			} else {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'category__in'          => $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			}
 		}
 		echo $before_widget;
 		?>
@@ -622,6 +681,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		$envince_defaults['number']   = 4;
 		$envince_defaults['type']     = 'latest';
 		$envince_defaults['category'] = '';
+		$envince_defaults['child_category'] = '0';
 
 		$instance = wp_parse_args( (array) $instance, $envince_defaults );
 		$title    = esc_attr( $instance[ 'title' ] );
@@ -629,6 +689,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		$number   = $instance['number'];
 		$type     = $instance['type'];
 		$category = $instance['category'];
+		$child_category 				= $instance[ 'child_category' ] ? 'checked="checked"' : '';
 	?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'envince' ); ?></label>
@@ -651,6 +712,12 @@ class envince_imagegrid_posts extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Select category', 'envince' ); ?>:</label>
 			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
 		</p>
+
+		<p>
+			<input class="checkbox" <?php echo $child_category; ?> id="<?php echo $this->get_field_id( 'child_category' ); ?>" name="<?php echo $this->get_field_name( 'child_category' ); ?>" type="checkbox" />
+			<label for="<?php echo $this->get_field_id('child_category'); ?>"><?php esc_html_e( 'Check to display the posts from child category of the chosen category.', 'envince' ); ?></label>
+		</p>
+
 		<?php
 	}
 
@@ -666,6 +733,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		$instance[ 'number' ]   = absint( $new_instance[ 'number' ] );
 		$instance[ 'type' ]     = $new_instance[ 'type' ];
 		$instance[ 'category' ] = $new_instance[ 'category' ];
+		$instance[ 'child_category' ] = isset( $new_instance[ 'child_category' ] ) ? 1 : 0;
 
 		return $instance;
 	}
@@ -680,6 +748,7 @@ class envince_imagegrid_posts extends WP_Widget {
 		$number   = empty( $instance[ 'number' ] ) ? 4 : $instance[ 'number' ];
 		$type     = isset( $instance[ 'type' ] ) ? $instance[ 'type' ] : 'latest' ;
 		$category = isset( $instance[ 'category' ] ) ? $instance[ 'category' ] : '';
+		$child_category = !empty( $instance[ 'child_category' ] ) ? 'true' : 'false';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query(
@@ -691,12 +760,23 @@ class envince_imagegrid_posts extends WP_Widget {
 			);
 		}
 		else {
-			$get_featured_posts = new WP_Query( array(
-				'posts_per_page'        => $number,
-				'post_type'             => 'post',
-				'category__in'          => $category
-				)
-			);
+			if ( $child_category == 'true' ) {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'cat'          			=> $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			} else {
+				$get_featured_posts = new WP_Query( array(
+					'posts_per_page'        => $number,
+		            'post_type'             => 'post',
+		            'category__in'          => $category,
+		            'no_found_rows'         => true,
+		            'post__not_in'          => $post__not_in,
+				) );
+			}
 		}
 		echo $before_widget;
 		?>
