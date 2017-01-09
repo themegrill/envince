@@ -75,7 +75,7 @@ function print_custom_css() {
 		/* Fetch header image and add css only if header image exists */
 		$header_image = get_header_image();
 		if($header_image){
-			if ( ! function_exists( 'the_custom_header_markup' ) || ( function_exists( 'the_custom_header_markup' ) && ! has_header_video() ) || ( function_exists( 'the_custom_header_markup' ) && ! is_front_page() && has_header_video() ) ) {
+			if ( ! function_exists( 'the_custom_header_markup' ) || ( function_exists( 'the_custom_header_markup' ) && ( ( ! has_header_video() ) || ( ! is_front_page() && has_header_video() ) ) ) ) {
 				$custom_css .= '
 				#intro{
 					height: auto;
