@@ -201,16 +201,14 @@ class envince_featured_posts_slider_widget extends WP_Widget {
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'cat'          			=> $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			} else {
 				$get_featured_posts = new WP_Query( array(
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'category__in'          => $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			}
 		}
@@ -401,16 +399,14 @@ class envince_twocol_posts extends WP_Widget {
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'cat'          			=> $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			} else {
 				$get_featured_posts = new WP_Query( array(
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'category__in'          => $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			}
 		}
@@ -583,16 +579,14 @@ class envince_onecol_posts extends WP_Widget {
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'cat'          			=> $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			} else {
 				$get_featured_posts = new WP_Query( array(
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'category__in'          => $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			}
 		}
@@ -765,16 +759,14 @@ class envince_imagegrid_posts extends WP_Widget {
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'cat'          			=> $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			} else {
 				$get_featured_posts = new WP_Query( array(
 					'posts_per_page'        => $number,
 		            'post_type'             => 'post',
 		            'category__in'          => $category,
-		            'no_found_rows'         => true,
-		            'post__not_in'          => $post__not_in,
+		            'no_found_rows'         => true
 				) );
 			}
 		}
