@@ -74,18 +74,20 @@ function print_custom_css() {
 
 		/* Fetch header image and add css only if header image exists */
 		$header_image = get_header_image();
-		if(!empty($header_image)){
-		$custom_css .= '
-		#intro{
-			height: auto;
-			margin: 0 auto;
-			width: 100%;
-			position: relative;
-			padding: 150px 0;
-		}
-		#intro{
-			background: url('.$header_image.') 50% 0 fixed;
-		}';
+		if($header_image){
+			if ( ! function_exists( 'the_custom_header_markup' ) || ( function_exists( 'the_custom_header_markup' ) && ( ( ! has_header_video() ) || ( ! is_front_page() && has_header_video() ) ) ) ) {
+				$custom_css .= '
+				#intro{
+					height: auto;
+					margin: 0 auto;
+					width: 100%;
+					position: relative;
+					padding: 150px 0;
+				}
+				#intro{
+					background: url('.$header_image.') 50% 0 fixed;
+				}';
+			}
 		}
 		/* Put the final style output together. */
 		$envince_custom_css_value = '';

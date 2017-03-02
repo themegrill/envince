@@ -102,9 +102,12 @@
 
 		</header><!-- #header -->
 
-		<?php if ( get_header_image() ) : // If there's a header image. ?>
+		<?php if ( get_header_image() || ( function_exists( 'the_custom_header_markup' ) && is_front_page() && has_header_video() ) ) : // If there's a header image. ?>
 
 		<section id="intro" data-speed="6" data-type="background">
+			<?php if ( function_exists( 'the_custom_header_markup' ) && is_front_page() && has_header_video() ) {
+				the_custom_header_markup();
+			} ?>
 		</section>
 
 		<?php endif; // End check for header image. ?>

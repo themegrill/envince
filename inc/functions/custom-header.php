@@ -25,6 +25,7 @@ function envince_custom_header_setup() {
 			'default-text-color'     => '000000',
 			'header-text'            => true,
 			'uploads'                => true,
+			'video'                  => true,
 			'wp-head-callback'       => 'envince_custom_header_wp_head',
 			'admin-head-callback'    => 'envince_custom_header_admin_head',
 			'admin-preview-callback' => 'envince_custom_header_admin_preview',
@@ -81,15 +82,19 @@ function envince_custom_header_admin_preview() { ?>
 
 			</header><!-- #header -->
 
-			<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+			<?php if ( function_exists( 'the_custom_header_markup' ) ) {
+				the_custom_header_markup();
+			} else {
+				if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
 
-				<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+					<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 
-			<?php elseif ( get_header_image() ) : // If there's a header image. ?>
+				<?php elseif ( get_header_image() ) : // If there's a header image. ?>
 
-				<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+					<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
 
-			<?php endif; // End check for header image. ?>
+				<?php endif; // End check for header image.
+			} // End the_custom_header_markup ?>
 
 		</div><!-- Fake </body> close. -->
 
