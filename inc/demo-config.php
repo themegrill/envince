@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function envince_demo_importer_packages( $packages ) {
 	$new_packages = array(
 		'envince-free' => array(
-			'name'    => __( 'Envince', 'envince' ),
+			'name'    => esc_html__( 'Envince', 'envince' ),
 			'preview' => 'https://demo.themegrill.com/envince/',
 		),
 	);
