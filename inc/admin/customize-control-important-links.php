@@ -8,23 +8,23 @@ class Envince_Important_Links extends WP_Customize_Control {
 		//Add Theme instruction, Support Forum, Demo Link, Rating Link
 		$important_links = array(
 			'view-pro' => array(
-				'link' => esc_url('http://themegrill.com/themes/envince/'),
+				'link' => esc_url('https://themegrill.com/themes/envince/'),
 				'text' => esc_html__('View Pro', 'envince'),
 			),
 			'theme-info' => array(
-				'link' => esc_url('http://themegrill.com/themes/envince/'),
+				'link' => esc_url('https://themegrill.com/themes/envince/'),
 				'text' => esc_html__('Theme Info', 'envince'),
 			),
 			'support' => array(
-				'link' => esc_url('http://themegrill.com/support-forum/'),
+				'link' => esc_url('https://themegrill.com/support-forum/'),
 				'text' => esc_html__('Support', 'envince'),
 			),
 			'documentation' => array(
-				'link' => esc_url('http://docs.themegrill.com/envince/'),
+				'link' => esc_url('https://docs.themegrill.com/envince/'),
 				'text' => esc_html__('Documentation', 'envince'),
 			),
 			'demo' => array(
-				'link' => esc_url('http://demo.themegrill.com/envince/'),
+				'link' => esc_url('https://demo.themegrill.com/envince/'),
 				'text' => esc_html__('View Demo', 'envince'),
 			),
 			'rating' => array(

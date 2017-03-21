@@ -1176,7 +1176,7 @@ msgid ""
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themegrill.com/themes/envince/"
+msgid "https://themegrill.com/themes/envince/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -1184,8 +1184,8 @@ msgid ""
 "Envince is bootstrap 3 powered magazine wp theme to make your site look "
 "good. Create powerful magazine site with drag and drop editing features. "
 "Get free support here: "
-"http://themegrill.com/support-forum/forum/envince-free/ and check demo "
-"here: http://demo.themegrill.com/envince"
+"https://themegrill.com/support-forum/forum/envince-free/ and check demo "
+"here: https://demo.themegrill.com/envince"
 msgstr ""
 
 #. Author of the plugin/theme
@@ -1193,7 +1193,7 @@ msgid "ThemeGrill"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themegrill.com"
+msgid "https://themegrill.com"
 msgstr ""
 
 #. Template Name of the plugin/theme

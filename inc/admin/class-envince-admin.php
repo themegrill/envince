@@ -125,11 +125,11 @@ class Envince_Admin {
 		</div>
 
 		<p class="envince-actions">
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/envince/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'envince' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/envince/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'envince' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'http://demo.themegrill.com/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'envince' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://demo.themegrill.com/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'envince' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'http://themegrill.com/themes/envince/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
 
 			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/envince/reviews/?rate=5#new-post' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'envince' ); ?></a>
 		</p>
@@ -187,25 +187,25 @@ class Envince_Admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'envince' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'envince' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/envince/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'envince' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://docs.themegrill.com/envince/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'envince' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got theme support question?', 'envince' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'envince' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'envince' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'envince' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Need more features?', 'envince' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'envince' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/envince/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'envince' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/themes/envince/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'envince' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got sales related question?', 'envince' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'envince' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'envince' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'envince' ); ?></a></p>
 					</div>
 
 					<div class="col">
@@ -467,7 +467,7 @@ class Envince_Admin {
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'http://themegrill.com/themes/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'envince' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'envince' ); ?></a>
 						</td>
 					</tr>
 				</tbody>
