@@ -1,14 +1,14 @@
-# Copyright (C) 2016 ThemeGrill
+# Copyright (C) 2017 ThemeGrill
 # This file is distributed under the GNU General Public License v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Envince 1.1.3\n"
+"Project-Id-Version: Envince 1.1.7\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-09-12 11:45:56+00:00\n"
+"POT-Creation-Date: 2017-05-01 09:42:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ThemeGrill Team <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Get started with Envince"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:115 inc/admin/customize.php:371
+#: inc/admin/class-envince-admin.php:115 inc/admin/customize.php:373
 msgid "%s"
 msgstr ""
 
@@ -409,80 +409,80 @@ msgstr ""
 msgid "Display Site Tagline"
 msgstr ""
 
-#: inc/admin/customize.php:135
+#: inc/admin/customize.php:136
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/admin/customize.php:146 library/admin/meta-box-post-layout.php:35
+#: inc/admin/customize.php:148 library/admin/meta-box-post-layout.php:35
 #: library/inc/functions-customize.php:72
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/customize.php:170
+#: inc/admin/customize.php:172
 msgid "Layout Sidebar"
 msgstr ""
 
-#: inc/admin/customize.php:191
+#: inc/admin/customize.php:193
 msgid "Layout Style"
 msgstr ""
 
-#: inc/admin/customize.php:216
+#: inc/admin/customize.php:218
 msgid "Layout Width"
 msgstr ""
 
-#: inc/admin/customize.php:240
+#: inc/admin/customize.php:242
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/admin/customize.php:244
+#: inc/admin/customize.php:246
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:245
+#: inc/admin/customize.php:247
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:246
+#: inc/admin/customize.php:248
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:247
+#: inc/admin/customize.php:249
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:256
+#: inc/admin/customize.php:258
 msgid "Header Info"
 msgstr ""
 
-#: inc/admin/customize.php:277
+#: inc/admin/customize.php:279
 msgid "Phone Number"
 msgstr ""
 
-#: inc/admin/customize.php:298
+#: inc/admin/customize.php:300
 msgid "Email"
 msgstr ""
 
-#: inc/admin/customize.php:319
+#: inc/admin/customize.php:321
 msgid "Location"
 msgstr ""
 
-#: inc/admin/customize.php:330
+#: inc/admin/customize.php:332
 msgid "Category Color Options"
 msgstr ""
 
-#: inc/admin/customize.php:332
+#: inc/admin/customize.php:334
 msgid "Change the color of each category items as you want."
 msgstr ""
 
-#: inc/admin/customize.php:340
+#: inc/admin/customize.php:342
 msgid "Category Color Settings"
 msgstr ""
 
-#: inc/admin/customize.php:385
+#: inc/admin/customize.php:387
 msgid "Miscellaneous Settings"
 msgstr ""
 
-#: inc/admin/customize.php:406
+#: inc/admin/customize.php:408
 msgid "Remove Featured Image from Single Post"
 msgstr ""
 
@@ -906,7 +906,7 @@ msgstr ""
 msgid "Primary Color"
 msgstr ""
 
-#: inc/functions/custom-css.php:114
+#: inc/functions/custom-css.php:124
 msgid "Custom CSS"
 msgstr ""
 
@@ -958,8 +958,8 @@ msgstr ""
 msgid "TG: Advertisement"
 msgstr ""
 
-#: inc/widgets/widgets.php:39 inc/widgets/widgets.php:312
-#: inc/widgets/widgets.php:473 inc/widgets/widgets.php:634
+#: inc/widgets/widgets.php:39 inc/widgets/widgets.php:330
+#: inc/widgets/widgets.php:509 inc/widgets/widgets.php:689
 msgid "Title:"
 msgstr ""
 
@@ -997,52 +997,57 @@ msgstr ""
 msgid "TG: Featured Post Slider"
 msgstr ""
 
-#: inc/widgets/widgets.php:139 inc/widgets/widgets.php:319
-#: inc/widgets/widgets.php:480 inc/widgets/widgets.php:641
+#: inc/widgets/widgets.php:141 inc/widgets/widgets.php:337
+#: inc/widgets/widgets.php:516 inc/widgets/widgets.php:696
 msgid "Number of posts to display:"
 msgstr ""
 
-#: inc/widgets/widgets.php:144 inc/widgets/widgets.php:324
-#: inc/widgets/widgets.php:485 inc/widgets/widgets.php:646
+#: inc/widgets/widgets.php:146 inc/widgets/widgets.php:342
+#: inc/widgets/widgets.php:521 inc/widgets/widgets.php:701
 msgid "Show latest Posts"
 msgstr ""
 
-#: inc/widgets/widgets.php:145 inc/widgets/widgets.php:325
-#: inc/widgets/widgets.php:486 inc/widgets/widgets.php:647
+#: inc/widgets/widgets.php:147 inc/widgets/widgets.php:343
+#: inc/widgets/widgets.php:522 inc/widgets/widgets.php:702
 msgid "Show posts from a category"
 msgstr ""
 
-#: inc/widgets/widgets.php:149 inc/widgets/widgets.php:329
-#: inc/widgets/widgets.php:490 inc/widgets/widgets.php:651
+#: inc/widgets/widgets.php:151 inc/widgets/widgets.php:347
+#: inc/widgets/widgets.php:526 inc/widgets/widgets.php:706
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets/widgets.php:286
+#: inc/widgets/widgets.php:163 inc/widgets/widgets.php:353
+#: inc/widgets/widgets.php:532 inc/widgets/widgets.php:712
+msgid "Check to display the posts from child category of the chosen category."
+msgstr ""
+
+#: inc/widgets/widgets.php:302
 msgid "Display latest posts or posts of specific category in two column layout."
 msgstr ""
 
-#: inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:310
 msgid "TG: Two Column Featured Post Widget"
 msgstr ""
 
-#: inc/widgets/widgets.php:316 inc/widgets/widgets.php:477
-#: inc/widgets/widgets.php:638
+#: inc/widgets/widgets.php:334 inc/widgets/widgets.php:513
+#: inc/widgets/widgets.php:693
 msgid "Description"
 msgstr ""
 
-#: inc/widgets/widgets.php:447
+#: inc/widgets/widgets.php:481
 msgid "Display latest posts or posts of specific category in one column layout."
 msgstr ""
 
-#: inc/widgets/widgets.php:455
+#: inc/widgets/widgets.php:489
 msgid "TG: One Column Featured Post Widget"
 msgstr ""
 
-#: inc/widgets/widgets.php:608
+#: inc/widgets/widgets.php:661
 msgid "Display latest posts or posts of specific category in image grid."
 msgstr ""
 
-#: inc/widgets/widgets.php:616
+#: inc/widgets/widgets.php:669
 msgid "TG: Image Grid Post Widget"
 msgstr ""
 

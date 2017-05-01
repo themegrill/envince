@@ -42,7 +42,7 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 
-### TBD
+### Version 1.1.7 - 2017-05-01
 * Added - Support for Video Headers introduced in WordPress 4.7.
 * Feature - Added compatibility for ThemeGrill Demo Importer plugin
 
