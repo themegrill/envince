@@ -41,6 +41,8 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+### Version TBD =
+* Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 ### Version 1.1.7 - 2017-05-01
 * Added - Support for Video Headers introduced in WordPress 4.7.
