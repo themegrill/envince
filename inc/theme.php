@@ -472,6 +472,14 @@ function envince_register_required_plugins() {
 			'version'            => '2.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 		),
+
+		// Include ThemeGrill Demo Importer as recommended
+		array(
+			'name'      => 'ThemeGrill Demo Importer',
+			'slug'      => 'themegrill-demo-importer',
+			'required'  => false,
+		),
+
 	);
 
 	/*
