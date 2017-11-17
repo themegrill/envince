@@ -41,6 +41,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+### Version TBD
+* Tweaks - Added compatibility for jetpack meta options
+
 ### Version 1.1.8 - 2017-05-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
