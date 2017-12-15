@@ -13,14 +13,6 @@
 			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'envince' ); ?></a>
 		</div><!-- .skip-link -->
 
-		<?php
-		$phone_info 	= get_theme_mod( 'envince_phone_info' );
-		$email_info 	= get_theme_mod( 'envince_email_info' );
-		$email			= sanitize_email($email_info); // Added layer of security from e-mail harvesters
-		$location_info  = get_theme_mod( 'envince_location_info' );
-
-		?>
-
 		<header <?php hybrid_attr( 'header' ); ?>>
 
 			<div id="header-top">
@@ -28,20 +20,7 @@
 					<div class="row">
 
 						<div class="info-icons col-md-6 col-sm-12 pull-left">
-							<ul>
-							<?php if(!empty($phone_info)):?>
-							<li><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
-							<?php endif;?>
-
-							<?php if(!empty($email_info)):?>
-							<li><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a></li>
-							<?php endif;?>
-
-							<?php if(!empty($location_info)):?>
-							<li><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
-							<?php endif;?>
-							</ul>
-
+							<?php envince_header_info_render(); ?>
 						</div>
 
 						<div class="social-icons col-md-6 col-sm-12 pull-right">

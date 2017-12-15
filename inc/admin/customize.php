@@ -35,6 +35,9 @@ add_action( 'customize_register', 'envince_customize_register' );
  */
 function envince_customize_register( $wp_customize ) {
 
+	// Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
 	/* Load JavaScript files. */
 	add_action( 'customize_preview_init', 'envince_enqueue_customizer_scripts' );
 
@@ -279,7 +282,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'default'  			   => '',
 			'capability'           => 'edit_theme_options',
-			'transport'            => 'postMessage',
+			'transport'            => $customizer_selective_refresh,
 			'sanitize_callback'	   => 'envince_sanitize_integer',
 		)
 	);
@@ -294,13 +297,21 @@ function envince_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Selective refresh for header phone number info
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'envince_phone_info', array(
+			'selector'        => '.info-icons li:first-child a',
+			'render_callback' => 'envince_phone_info',
+		) );
+	}
+
 	/* Add the 'email info' setting. */
 	$wp_customize->add_setting(
 		'envince_email_info',
 		array(
 			'default'  			   => '',
 			'capability'           => 'edit_theme_options',
-			'transport'            => 'postMessage',
+			'transport'            => $customizer_selective_refresh,
 			'sanitize_callback'	   =>  'sanitize_email',
 		)
 	);
@@ -315,13 +326,21 @@ function envince_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Selective refresh for header email info
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'envince_email_info', array(
+			'selector'        => '.info-icons li:nth-child(2)',
+			'render_callback' => 'envince_email_info',
+		) );
+	}
+
 	/* Add the 'location info' setting. */
 	$wp_customize->add_setting(
 		'envince_location_info',
 		array(
 			'default'  			   => '',
 			'capability'           => 'edit_theme_options',
-			'transport'            => 'postMessage',
+			'transport'            => $customizer_selective_refresh,
 			'sanitize_callback'	   =>  'envince_sanitize_text',
 		)
 	);
@@ -335,6 +354,14 @@ function envince_customize_register( $wp_customize ) {
 			'settings' => 'envince_location_info',
 		)
 	);
+
+	// Selective refresh for header location info
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'envince_location_info', array(
+			'selector'        => '.info-icons li:last-child',
+			'render_callback' => 'envince_location_info',
+		) );
+	}
 
 	/* Category Color Panel */
 	$wp_customize->add_panel(
@@ -589,6 +616,25 @@ function envince_customize_partial_blogname() {
  */
 function envince_customize_partial_blogdescription() {
    bloginfo( 'description' );
+}
+
+// Funcitons for header info phone number
+function envince_phone_info() {
+	$phone_info 	= get_theme_mod( 'envince_phone_info' );
+	echo $phone_info;
+}
+
+// Funcitons for header info email
+function envince_email_info() {
+	$email_info 	= get_theme_mod( 'envince_email_info' );
+	$email			= sanitize_email($email_info);
+	echo $email;
+}
+
+// Funcitons for header info phone number
+function envince_location_info() {
+	$location_info  = get_theme_mod( 'envince_location_info' );
+	echo '<i class="fa fa-location-arrow"></i>' . $location_info;
 }
 
 /*

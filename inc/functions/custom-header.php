@@ -119,3 +119,28 @@ function envince_custom_header_admin_head() {
 
 	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 }
+
+if ( ! function_exists( 'envince_header_info_render' ) ) :
+	function envince_header_info_render() { 
+		$phone_info    = get_theme_mod( 'envince_phone_info' );
+		$email_info    = get_theme_mod( 'envince_email_info' );
+		$email         = sanitize_email( $email_info );
+		$location_info = get_theme_mod( 'envince_location_info' );
+
+		if ( ! empty( $phone_info ) || ! empty( $email ) || ! empty( $location_info ) ) { ?>
+			<ul>
+				<?php if( ! empty( $phone_info ) ):?>
+					<li><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
+				<?php endif;?>
+
+				<?php if( ! empty( $email ) ):?>
+					<li><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a>
+				<?php endif;?>
+
+				<?php if( ! empty( $location_info ) ):?>
+					<li><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
+				<?php endif;?>
+			</ul>
+	<?php }
+	}
+endif;
