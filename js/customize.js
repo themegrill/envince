@@ -41,7 +41,7 @@ jQuery( document ).ready( function() {
 	/*
 	 * Shows a live preview of changing the site title color.
 	 */
-	wp.customize( 'header_text_color', function( value ) {
+	wp.customize( 'header_textcolor', function( value ) {
 
 		value.bind( function( to ) {
 
