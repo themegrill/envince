@@ -213,7 +213,7 @@ function envince_enqueue_styles() {
 
 	/* Load parent theme stylesheet if child theme is active. */
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
+		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style.css" );
 	}
 
 	/* Load active theme stylesheet. */
