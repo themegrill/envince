@@ -24,7 +24,7 @@
 $envince_dir = trailingslashit( get_template_directory() );
 
 /* Load the Hybrid Core framework and theme files. */
-require_once( $envince_dir . 'library/hybrid.php'        );
+require_once( $envince_dir . 'library/hybrid.php' );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
@@ -88,11 +88,14 @@ function envince_theme_setup() {
 
 	/* Adds the support for the Custom Logo introduced in WordPress 4.5 */
 	add_theme_support( 'custom-logo',
-	   array(
-	      'flex-width' => true,
-	      'flex-height' => true,
-	   )
+		array(
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
 	);
+
+	// Support for selective refresh widgets in Customizer
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1280 );
@@ -138,16 +141,16 @@ function envince_scripts() {
 }
 
 /* Displays the site logo */
- if ( ! function_exists( 'envince_the_custom_logo' ) ) {
- 	/**
- 	 * Displays the optional custom logo.
- 	 */
- 	function envince_the_custom_logo() {
- 		if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'envince_logo','' ) == '') ) {
- 			the_custom_logo();
- 		}
- 	}
- }
+if ( ! function_exists( 'envince_the_custom_logo' ) ) {
+	/**
+	 * Displays the optional custom logo.
+	 */
+	function envince_the_custom_logo() {
+		if ( function_exists( 'the_custom_logo' ) && ( get_theme_mod( 'envince_logo', '' ) == '' ) ) {
+			the_custom_logo();
+		}
+	}
+}
 
 /**
  * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section

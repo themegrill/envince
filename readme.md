@@ -42,6 +42,8 @@ Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
 ### Version TBD
+* Feature - Introduce customizer selective and live refresh feature
+* Added support for customizer widgets selective refresh
 * Tweaks - Added compatibility for jetpack meta options
 
 ### Version 1.1.8 - 2017-05-10 =
