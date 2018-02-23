@@ -189,7 +189,7 @@ function envince_enqueue_scripts() {
 	wp_enqueue_script( 'envince-bxslider' );
 
 	/* Loads theme specific js file */
-	wp_register_script( 'envince', trailingslashit( get_template_directory_uri() ) . "js/theme{$suffix}.js", array( 'jquery' ), null, true );
+	wp_register_script( 'envince', trailingslashit( get_template_directory_uri() ) . "js/theme.js", array( 'jquery' ), null, true );
 
 	wp_enqueue_script( 'envince' );
 }

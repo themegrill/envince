@@ -45,7 +45,6 @@ function envince_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport              = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport       = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport      = 'postMessage';
-	$wp_customize->get_setting( 'header_image' )->transport          = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport      = 'postMessage';
 	$wp_customize->get_setting( 'background_image' )->transport      = 'postMessage';
 	$wp_customize->get_setting( 'background_position_x' )->transport = 'postMessage';
@@ -593,7 +592,7 @@ function envince_enqueue_customizer_scripts() {
 
 	wp_enqueue_script(
 		'envince-customize',
-		trailingslashit( get_template_directory_uri() ) . "js/customize{$suffix}.js",
+		trailingslashit( get_template_directory_uri() ) . "js/customize.js",
 		array( 'jquery' ),
 		null,
 		true

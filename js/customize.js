@@ -33,7 +33,6 @@ jQuery( document ).ready( function() {
 		value.bind( function( to ) {
 
 			jQuery( '#site-description' ).html( to );
-
 		} ); // value.bind
 
 	} ); // wp.customize
@@ -47,28 +46,6 @@ jQuery( document ).ready( function() {
 
 			jQuery( '#site-title a' ).
 				css( 'color', to );
-
-		} ); // value.bind
-
-	} ); // wp.customize
-
-	/*
-	 * Handes the header image.  This code replaces the "src" attribute for the image.
-	 */
-	wp.customize( 'header_image', function( value ) {
-
-		value.bind( function( to ) {
-
-			/* If removing the header image, make sure to hide it so there's not an error image. */
-			if ( 'remove-header' === to ) {
-				jQuery( '.header-image' ).hide();
-			}
-
-			/* Else, make sure to show the image and change the source. */
-			else {
-				jQuery( '.header-image' ).show();
-				jQuery( '.header-image' ).attr( 'src', to );
-			}
 
 		} ); // value.bind
 
