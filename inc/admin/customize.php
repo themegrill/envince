@@ -301,7 +301,7 @@ function envince_customize_register( $wp_customize ) {
 	// Selective refresh for header phone number info
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'envince_phone_info', array(
-			'selector'        => '.info-icons li.phone a',
+			'selector'        => '.info-icons li.header-info-phone a',
 			'render_callback' => 'envince_phone_info',
 		) );
 	}
@@ -330,7 +330,7 @@ function envince_customize_register( $wp_customize ) {
 	// Selective refresh for header email info
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'envince_email_info', array(
-			'selector'        => '.info-icons li.email a',
+			'selector'        => '.info-icons li.header-info-email a',
 			'render_callback' => 'envince_email_info',
 		) );
 	}
@@ -359,7 +359,7 @@ function envince_customize_register( $wp_customize ) {
 	// Selective refresh for header location info
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'envince_location_info', array(
-			'selector'        => '.info-icons li.location',
+			'selector'        => '.info-icons li.header-info-location',
 			'render_callback' => 'envince_location_info',
 		) );
 	}

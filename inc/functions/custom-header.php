@@ -130,15 +130,15 @@ if ( ! function_exists( 'envince_header_info_render' ) ) :
 		if ( ! empty( $phone_info ) || ! empty( $email ) || ! empty( $location_info ) ) { ?>
 			<ul>
 				<?php if( ! empty( $phone_info ) ):?>
-					<li class="phone"><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
+					<li class="header-info-phone"><a href="tel:<?php echo $phone_info;?>"><?php echo $phone_info;?></a></li>
 				<?php endif;?>
 
 				<?php if( ! empty( $email ) ):?>
-					<li class="email"><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a>
+					<li class="header-info-email"><a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a>
 				<?php endif;?>
 
 				<?php if( ! empty( $location_info ) ):?>
-					<li class="location"><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
+					<li class="header-info-location"><i class="fa fa-location-arrow"></i> <?php echo $location_info;?></li>
 				<?php endif;?>
 			</ul>
 	<?php }
