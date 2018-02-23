@@ -519,3 +519,10 @@ function envince_admin_scripts( $hook ) {
 		wp_enqueue_script( 'envince-script', get_template_directory_uri() . '/js/image-uploader.js', false, '1.0', true );
 	}
 }
+
+/**
+ * Load Jetpack compatibility file.
+ */
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require_once( $envince_inc . 'inc/jetpack.php' );
+}
