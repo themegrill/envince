@@ -627,20 +627,23 @@ function envince_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
-// Funcitons for header info phone number
+/**
+ * Header info
+ */
+// phone number
 function envince_phone_info() {
 	$phone_info = get_theme_mod( 'envince_phone_info' );
 	echo $phone_info;
 }
 
-// Funcitons for header info email
+// email
 function envince_email_info() {
 	$email_info = get_theme_mod( 'envince_email_info' );
 	$email      = sanitize_email( $email_info );
 	echo $email;
 }
 
-// Funcitons for header info phone number
+// location
 function envince_location_info() {
 	$location_info = get_theme_mod( 'envince_location_info' );
 	echo '<i class="fa fa-location-arrow"></i>' . $location_info;
