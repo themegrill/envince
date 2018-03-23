@@ -24,6 +24,16 @@ function envince_demo_importer_packages( $packages ) {
 			'name'    => esc_html__( 'Envince', 'envince' ),
 			'preview' => 'https://demo.themegrill.com/envince/',
 		),
+		'envince-pro'  => array(
+			'name'     => __( 'Envince Pro', 'envince' ),
+			'preview'  => 'https://demo.themegrill.com/envince-pro/',
+			'pro_link' => 'https://themegrill.com/themes/envince/'
+		),
+		'envince-pro-food'  => array(
+			'name'     => __( 'Envince Pro Food', 'envince' ),
+			'preview'  => 'https://demo.themegrill.com/envince-pro-food/',
+			'pro_link' => 'https://themegrill.com/themes/envince/'
+		)
 	);
 
 	return array_merge( $new_packages, $packages );
