@@ -480,6 +480,14 @@ function envince_register_required_plugins() {
 			'required'  => false,
 		),
 
+		// Recommend evfs plugin.
+		array(
+			'name'               => 'Everest Forms – Easy Contact Form and Form Builder',
+			'slug'               => 'everest-forms',
+			'required'           => false,
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+		),
+
 	);
 
 	/*
