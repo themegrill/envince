@@ -41,7 +41,7 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
-### Version TBD
+### Version 1.1.9 - 2018-03-23 =
 * Feature - Introduce customizer selective and live refresh feature
 * Added support for customizer widgets selective refresh
 * Tweaks - Added compatibility for jetpack meta options
