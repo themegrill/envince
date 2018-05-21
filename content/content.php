@@ -31,7 +31,7 @@
 			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'envince' ), 'before' => '<i class="fa fa-folder-open-o"></i> ' ) ); ?>
 			<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'envince' ), 'before' => '<br /> <i class="fa fa-tags"></i> ' ) ); ?>
 
-			<?php $author_des = get_the_author_meta('description '); ?>
+			<?php $author_des = get_the_author_meta('description'); ?>
 			<?php if(!empty($author_des)) : ?>
 			<div class="author-bio">
 				<div class="avatar">
