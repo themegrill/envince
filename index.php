@@ -50,6 +50,10 @@ $layout_global = get_theme_mod('envince_sidebar','content-sidebar');
 
 		<?php locate_template( array( 'misc/loop-nav.php' ), true ); // Loads the misc/loop-nav.php template. ?>
 
+		<?php if ( ( get_theme_mod( 'envince_related_posts_activate', 0 ) == 1 ) && is_single() ) {
+			locate_template( array( 'content/related-posts.php' ), true );
+		} ?>
+
 	<?php else : // If no posts were found. ?>
 
 		<?php locate_template( array( 'content/error.php' ), true ); // Loads the content/error.php template. ?>
