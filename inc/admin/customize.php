@@ -420,6 +420,47 @@ function envince_customize_register( $wp_customize ) {
 		$i ++;
 	}
 
+	// related posts.
+	$wp_customize->add_panel(
+		'envince_Additional_panel',
+		array(
+			'priority'    => 200,
+			'title'       => __( 'Additional Options', 'envince' ),
+			'capability'  => 'edit_theme_options',
+		)
+	);
+	$wp_customize->add_section( 'envince_related_posts_section', array(
+		'priority' => 4,
+		'title'    => esc_html__( 'Related Posts', 'envince' ),
+		'panel'    => 'envince_Additional_panel',
+	) );
+	$wp_customize->add_setting( 'envince_related_posts_activate', array(
+		'default'           => 0,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'envince_sanitize_checkbox',
+	) );
+	$wp_customize->add_control( 'envince_related_posts_activate', array(
+		'type'     => 'checkbox',
+		'label'    => esc_html__( 'Check to activate the related posts', 'envince' ),
+		'section'  => 'envince_related_posts_section',
+		'settings' => 'envince_related_posts_activate',
+	) );
+	$wp_customize->add_setting( 'envince_related_posts', array(
+		'default'           => 'categories',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'envince_sanitize_radio',
+	) );
+	$wp_customize->add_control( 'envince_related_posts', array(
+		'type'     => 'radio',
+		'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'envince' ),
+		'section'  => 'envince_related_posts_section',
+		'settings' => 'envince_related_posts',
+		'choices'  => array(
+			'categories' => esc_html__( 'Related Posts By Categories', 'envince' ),
+			'tags'       => esc_html__( 'Related Posts By Tags', 'envince' ),
+		),
+	) );
+
 	/* Add 'miscellaneous settings' section */
 	$wp_customize->add_section(
 		'envince_miscellaneous',
