@@ -40,6 +40,12 @@ $layout_global = get_theme_mod('envince_sidebar','content-sidebar');
 
 			<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
 
+			<?php locate_template( array( 'misc/loop-nav.php' ), true ); // Loads the misc/loop-nav.php template. ?>
+
+			<?php if ( ( get_theme_mod( 'envince_related_posts_activate', 0 ) == 1 ) && is_single() ) {
+				locate_template( array( 'content/related-posts.php' ), true );
+			} ?>
+
 			<?php if ( is_singular() ) : // If viewing a single post/page/CPT. ?>
 
 				<?php comments_template( '', true ); // Loads the comments.php template. ?>
@@ -47,8 +53,6 @@ $layout_global = get_theme_mod('envince_sidebar','content-sidebar');
 			<?php endif; // End check for single post. ?>
 
 		<?php endwhile; // End found posts loop. ?>
-
-		<?php locate_template( array( 'misc/loop-nav.php' ), true ); // Loads the misc/loop-nav.php template. ?>
 
 	<?php else : // If no posts were found. ?>
 
