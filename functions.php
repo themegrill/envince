@@ -200,17 +200,17 @@ if ( ! function_exists( 'envince_related_posts_function' ) ) {
 
 		// Related by categories.
 		if ( get_theme_mod( 'envince_related_posts', 'categories' ) == 'categories' ) {
-			$cats = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+			$cats                 = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
 			$args['category__in'] = $cats;
 		}
 
 		// Related by tags.
 		if ( get_theme_mod( 'envince_related_posts', 'categories' ) == 'tags' ) {
-			$tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
+			$tags            = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
 			$args['tag__in'] = $tags;
 
 			// If no tags added, return.
-			if (!$tags) {
+			if ( ! $tags ) {
 				$break = true;
 			}
 		}
