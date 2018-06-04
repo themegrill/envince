@@ -41,6 +41,10 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+## TBD
+* Feature - Added Author Bio display option
+* Feature - Added Related posts display option
+
 ### Version 1.1.9 - 2018-03-23 =
 * Feature - Introduce customizer selective and live refresh feature
 * Added support for customizer widgets selective refresh
