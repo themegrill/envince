@@ -41,7 +41,7 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
-## TBD
+### Version 1.2.0 - 2018-06-04 =
 * Feature - Added Author Bio display option
 * Feature - Added Related posts display option
 
