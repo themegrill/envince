@@ -132,7 +132,7 @@ if ( ! class_exists( 'Envince_Admin' ) ) :
 
 				<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://demo.themegrill.com/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'envince' ); ?></a>
 
-				<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
+				<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/?utm_source=envince-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/envince/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'envince' ); ?></a>
 			</p>
@@ -226,7 +226,7 @@ if ( ! class_exists( 'Envince_Admin' ) ) :
 							<h3><?php esc_html_e( 'Need more features?', 'envince' ); ?></h3>
 							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'envince' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/themes/envince/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/themes/envince/?utm_source=envince-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Pro', 'envince' ); ?></a>
 							</p>
 						</div>
 
@@ -506,7 +506,7 @@ if ( ! class_exists( 'Envince_Admin' ) ) :
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'envince' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'envince_pro_theme_url', 'https://themegrill.com/themes/envince/?utm_source=envince-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'envince' ); ?></a>
 						</td>
 					</tr>
 					</tbody>
