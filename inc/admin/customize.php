@@ -18,7 +18,6 @@ add_action( 'customize_register', 'envince_custom_controls' );
 function envince_custom_controls() {
 
 	require_once get_template_directory() . '/inc/admin/customize-control-layout.php';
-	require_once get_template_directory() . '/inc/admin/customize-control-important-links.php';
 
 }
 
@@ -68,6 +67,56 @@ function envince_customize_register( $wp_customize ) {
 	/* Remove the WordPress display header text control. */
 	$wp_customize->remove_control( 'display_header_text' );
 
+	/**
+	 * Class to include upsell link campaign for theme.
+	 *
+	 * Class ENVINCE_Upsell_Section
+	 */
+	class ENVINCE_Upsell_Section extends WP_Customize_Section {
+		public $type = 'envince-upsell-section';
+		public $url  = '';
+		public $id   = '';
+
+		/**
+		 * Gather the parameters passed to client JavaScript via JSON.
+		 *
+		 * @return array The array to be exported to the client as JSON.
+		 */
+		public function json() {
+			$json        = parent::json();
+			$json['url'] = esc_url( $this->url );
+			$json['id']  = $this->id;
+
+			return $json;
+		}
+
+		/**
+		 * An Underscore (JS) template for rendering this section.
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="envince-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
+		}
+	}
+
+// Register `ENVINCE_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'ENVINCE_Upsell_Section' );
+
+// Add `ENVINCE_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new ENVINCE_Upsell_Section( $wp_customize, 'envince_upsell_section',
+			array(
+				'title'      => esc_html__( 'View PRO version', 'envince' ),
+				'url'        => 'https://themegrill.com/themes/envince/?utm_source=envince-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
+			)
+		)
+	);
+
 	/* Add 'site_title' setting */
 	$wp_customize->add_setting(
 		'envince_site_title',
@@ -83,7 +132,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'label'   => esc_html__( 'Display Site Title', 'envince' ),
 			'section' => 'title_tagline',
-			'type'    => 'checkbox'
+			'type'    => 'checkbox',
 		)
 	);
 
@@ -102,7 +151,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'label'   => esc_html__( 'Display Site Tagline', 'envince' ),
 			'section' => 'title_tagline',
-			'type'    => 'checkbox'
+			'type'    => 'checkbox',
 		)
 	);
 
@@ -139,7 +188,7 @@ function envince_customize_register( $wp_customize ) {
 			'title'       => esc_html__( 'Layout', 'envince' ),
 			'description' => 'Select main content and sidebar layout for blog.(Note: Layout for individual posts and pages can be selected in the respective posts and pages.',
 			'priority'    => 50,
-			'capability'  => 'edit_theme_options'
+			'capability'  => 'edit_theme_options',
 		)
 	);
 
@@ -161,7 +210,7 @@ function envince_customize_register( $wp_customize ) {
 			'envince_sidebar',
 			array(
 				'label'   => esc_html__( 'Layout Sidebar', 'envince' ),
-				'section' => 'envince_layout'
+				'section' => 'envince_layout',
 			)
 		)
 	);
@@ -187,7 +236,7 @@ function envince_customize_register( $wp_customize ) {
 			'choices' => array(
 				'wide'  => 'Wide Layout',
 				'boxed' => 'Boxed Layout',
-			)
+			),
 		)
 	);
 
@@ -214,7 +263,7 @@ function envince_customize_register( $wp_customize ) {
 				'1170' => '1170px (Default)',
 				'992'  => '992px',
 				'768'  => '768px',
-			)
+			),
 		)
 	);
 
@@ -223,7 +272,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'default'           => 4,
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'envince_sanitize_integer'
+			'sanitize_callback' => 'envince_sanitize_integer',
 		)
 	);
 
@@ -237,7 +286,7 @@ function envince_customize_register( $wp_customize ) {
 				'1' => esc_html__( '1 Footer Widget Area', 'envince' ),
 				'2' => esc_html__( '2 Footer Widget Area', 'envince' ),
 				'3' => esc_html__( '3 Footer Widget Area', 'envince' ),
-				'4' => esc_html__( '4 Footer Widget Area', 'envince' )
+				'4' => esc_html__( '4 Footer Widget Area', 'envince' ),
 			),
 		)
 	);
@@ -248,7 +297,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'title'      => esc_html__( 'Header Info', 'envince' ),
 			'priority'   => 60,
-			'capability' => 'edit_theme_options'
+			'capability' => 'edit_theme_options',
 		)
 	);
 
@@ -346,7 +395,7 @@ function envince_customize_register( $wp_customize ) {
 			'priority'    => 200,
 			'title'       => __( 'Category Color Options', 'envince' ),
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Change the color of each category items as you want.', 'envince' )
+			'description' => __( 'Change the color of each category items as you want.', 'envince' ),
 		)
 	);
 
@@ -355,14 +404,14 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'priority' => 10,
 			'title'    => __( 'Category Color Settings', 'envince' ),
-			'panel'    => 'envince_category_color_panel'
+			'panel'    => 'envince_category_color_panel',
 		)
 	);
 
 	$i    = 1;
 	$args = array(
 		'orderby'    => 'id',
-		'hide_empty' => 0
+		'hide_empty' => 0,
 	);
 
 	$categories       = get_categories( $args );
@@ -376,7 +425,7 @@ function envince_customize_register( $wp_customize ) {
 				'default'              => '',
 				'capability'           => 'edit_theme_options',
 				'sanitize_callback'    => 'envince_color_option_hex_sanitize',
-				'sanitize_js_callback' => 'envince_color_escaping_option_sanitize'
+				'sanitize_js_callback' => 'envince_color_escaping_option_sanitize',
 			)
 		);
 
@@ -388,7 +437,7 @@ function envince_customize_register( $wp_customize ) {
 					'label'    => sprintf( __( '%s', 'envince' ), $wp_category_list[ $category_list->cat_ID ] ),
 					'section'  => 'envince_category_color_setting',
 					'settings' => 'envince_category_color_' . get_cat_id( $wp_category_list[ $category_list->cat_ID ] ),
-					'priority' => $i
+					'priority' => $i,
 				)
 			)
 		);
@@ -399,9 +448,9 @@ function envince_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'envince_Additional_panel',
 		array(
-			'priority'    => 200,
-			'title'       => __( 'Additional Options', 'envince' ),
-			'capability'  => 'edit_theme_options',
+			'priority'   => 200,
+			'title'      => __( 'Additional Options', 'envince' ),
+			'capability' => 'edit_theme_options',
 		)
 	);
 	$wp_customize->add_section( 'envince_related_posts_section', array(
@@ -442,7 +491,7 @@ function envince_customize_register( $wp_customize ) {
 		array(
 			'title'      => esc_html__( 'Miscellaneous Settings', 'envince' ),
 			'priority'   => 100,
-			'capability' => 'edit_theme_options'
+			'capability' => 'edit_theme_options',
 		)
 	);
 
@@ -464,7 +513,7 @@ function envince_customize_register( $wp_customize ) {
 			'label'    => esc_html__( 'Remove Featured Image from Single Post', 'envince' ),
 			'section'  => 'envince_miscellaneous',
 			'settings' => 'estore_remove_featured_image',
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 } // customizer section end
@@ -711,5 +760,22 @@ function envince_customizer_custom_scripts() { ?>
 			background: #2380BA;
 		}
 	</style>
+
+	<script>
+		( function ( $, api ) {
+			api.sectionConstructor['envince-upsell-section'] = api.Section.extend( {
+
+				// No events for this type of section.
+				attachEvents : function () {
+				},
+
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
+
+	</script>
 	<?php
 }
