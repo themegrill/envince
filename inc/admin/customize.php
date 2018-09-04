@@ -68,31 +68,6 @@ function envince_customize_register( $wp_customize ) {
 	/* Remove the WordPress display header text control. */
 	$wp_customize->remove_control( 'display_header_text' );
 
-	/* Adds ThemeGrill Important Links Section */
-	$wp_customize->add_section( 'envince_important_links',
-		array(
-			'priority' => 1,
-			'title'    => esc_html__( 'Envince Important Links', 'envince' ),
-		)
-	);
-
-	$wp_customize->add_setting( 'envince_important_links',
-		array(
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'envince_links_sanitize'
-		)
-	);
-
-	$wp_customize->add_control(
-		new envince_Important_Links(
-			$wp_customize, 'important_links', array(
-				'label'    => esc_html__( 'Important Links', 'envince' ),
-				'section'  => 'envince_important_links',
-				'settings' => 'envince_important_links'
-			)
-		)
-	);
-
 	/* Add 'site_title' setting */
 	$wp_customize->add_setting(
 		'envince_site_title',
