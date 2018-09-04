@@ -723,8 +723,8 @@ function envince_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
 		li#accordion-section-envince_upsell_section h3.accordion-section-title {
-			background-color: #289DCC !important;
-			border-left-color: #15688a !important;
+			background-color: #2EBDFF !important;
+			border-left-color: #1793cc !important;
 		}
 
 		#accordion-section-envince_upsell_section h3 a:after {
@@ -753,7 +753,7 @@ function envince_customizer_custom_scripts() { ?>
 		}
 
 		li#accordion-section-envince_upsell_section h3.accordion-section-title:hover {
-			background-color: #1a87b3 !important;
+			background-color: #35add2 !important;
 		}
 		/* Upsell button CSS */
 		.themegrill-pro-info,
