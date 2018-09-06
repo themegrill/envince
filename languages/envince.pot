@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Envince 1.2.0\n"
+"Project-Id-Version: Envince 1.2.1\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-06-04 06:35:23+00:00\n"
+"POT-Creation-Date: 2018-09-06 05:18:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: ThemeGrill Team <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/admin/class-envince-admin.php:373
+#: inc/admin/class-envince-admin.php:412
 msgid "1"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:374
+#: inc/admin/class-envince-admin.php:413
 msgid "2"
 msgstr ""
 
@@ -92,183 +92,178 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:36 inc/admin/class-envince-admin.php:113
+#: inc/admin/class-envince-admin.php:36 inc/admin/class-envince-admin.php:116
 msgid "About"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:74
+#: inc/admin/class-envince-admin.php:77
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:77
+#: inc/admin/class-envince-admin.php:80
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:90
+#: inc/admin/class-envince-admin.php:93
 msgid "Dismiss"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:91
+#: inc/admin/class-envince-admin.php:94
 msgid ""
 "Welcome! Thank you for choosing Envince! To fully take advantage of the "
 "best our theme can offer please make sure you visit our %swelcome page%s."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:93
+#: inc/admin/class-envince-admin.php:96
 msgid "Get started with Envince"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:115 inc/admin/customize.php:413
+#: inc/admin/class-envince-admin.php:118 inc/admin/customize.php:437
 msgid "%s"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:128
-#: inc/admin/customize-control-important-links.php:16
+#: inc/admin/class-envince-admin.php:131
 msgid "Theme Info"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:130
-#: inc/admin/customize-control-important-links.php:28
+#: inc/admin/class-envince-admin.php:133
 msgid "View Demo"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:132 inc/admin/class-envince-admin.php:202
-#: inc/admin/class-envince-admin.php:470
-#: inc/admin/customize-control-important-links.php:12
+#: inc/admin/class-envince-admin.php:135 inc/admin/class-envince-admin.php:229
+#: inc/admin/class-envince-admin.php:509
 msgid "View Pro"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:134
-#: inc/admin/customize-control-important-links.php:32
+#: inc/admin/class-envince-admin.php:137
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:142
+#: inc/admin/class-envince-admin.php:152
 msgid "Supported Plugins"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:145
+#: inc/admin/class-envince-admin.php:160
 msgid "Free Vs Pro"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:148
+#: inc/admin/class-envince-admin.php:168
 msgid "Changelog"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:182 inc/admin/metabox.php:43
+#: inc/admin/class-envince-admin.php:202 inc/admin/metabox.php:43
 msgid "Theme Customizer"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:183
+#: inc/admin/class-envince-admin.php:203
 msgid "All Theme Options are available via Customize screen."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:184
+#: inc/admin/class-envince-admin.php:205
 msgid "Customize"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:188 inc/admin/class-envince-admin.php:190
-#: inc/admin/customize-control-important-links.php:24
+#: inc/admin/class-envince-admin.php:210 inc/admin/class-envince-admin.php:213
 msgid "Documentation"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:189
+#: inc/admin/class-envince-admin.php:211
 msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:194
+#: inc/admin/class-envince-admin.php:218
 msgid "Got theme support question?"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:195
+#: inc/admin/class-envince-admin.php:219
 msgid "Please put it in our dedicated support forum."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:196
+#: inc/admin/class-envince-admin.php:221
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:200
+#: inc/admin/class-envince-admin.php:226
 msgid "Need more features?"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:201 inc/admin/class-envince-admin.php:335
+#: inc/admin/class-envince-admin.php:227 inc/admin/class-envince-admin.php:374
 msgid "Upgrade to PRO version for more exciting features."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:206
+#: inc/admin/class-envince-admin.php:234
 msgid "Got sales related question?"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:207
+#: inc/admin/class-envince-admin.php:235
 msgid "Please send it via our sales contact page."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:208
+#: inc/admin/class-envince-admin.php:237
 msgid "Contact Page"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:214 inc/admin/class-envince-admin.php:222
+#: inc/admin/class-envince-admin.php:244 inc/admin/class-envince-admin.php:252
 msgid "Translate"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:218
+#: inc/admin/class-envince-admin.php:248
 msgid "Click below to translate this theme into your own language."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:234
+#: inc/admin/class-envince-admin.php:264
 msgid "Return to Updates"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:234
+#: inc/admin/class-envince-admin.php:264
 msgid "Return to Dashboard &rarr; Updates"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:237
+#: inc/admin/class-envince-admin.php:267
 msgid "Go to Dashboard &rarr; Home"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:237
+#: inc/admin/class-envince-admin.php:267
 msgid "Go to Dashboard"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:254
+#: inc/admin/class-envince-admin.php:284
 msgid "View changelog below."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:306
+#: inc/admin/class-envince-admin.php:338
 msgid "This theme recommends following plugins."
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:308 inc/admin/class-envince-admin.php:362
+#: inc/admin/class-envince-admin.php:341 inc/admin/class-envince-admin.php:401
 msgid "Social Icons"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:309 inc/admin/class-envince-admin.php:312
+#: inc/admin/class-envince-admin.php:342 inc/admin/class-envince-admin.php:346
 msgid " by ThemeGrill"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:311
+#: inc/admin/class-envince-admin.php:345
 msgid "Easy Social Sharing"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:314
+#: inc/admin/class-envince-admin.php:349
 msgid "Contact Form 7"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:315
+#: inc/admin/class-envince-admin.php:352
 msgid "Page Builder by SiteOrigin"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:317
+#: inc/admin/class-envince-admin.php:356
 msgid "WPML"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:318
+#: inc/admin/class-envince-admin.php:357
 msgid " Fully Compatible in Pro"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:340
+#: inc/admin/class-envince-admin.php:379
 msgid "Features"
 msgstr ""
 
@@ -276,241 +271,236 @@ msgstr ""
 msgid "Envince"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:342 inc/demo-config.php:28
+#: inc/admin/class-envince-admin.php:381 inc/demo-config.php:26
 msgid "Envince Pro"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:347
+#: inc/admin/class-envince-admin.php:386
 msgid "Google Fonts Option"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:349
+#: inc/admin/class-envince-admin.php:388
 msgid "600+"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:352
+#: inc/admin/class-envince-admin.php:391
 msgid "Font Size options"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:357
+#: inc/admin/class-envince-admin.php:396
 msgid "Color Palette"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:358
+#: inc/admin/class-envince-admin.php:397
 msgid "Primary Color Option"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:359
+#: inc/admin/class-envince-admin.php:398
 msgid "20+ Color Options"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:367
+#: inc/admin/class-envince-admin.php:406
 msgid "Boxed & Wide layout option"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:372
+#: inc/admin/class-envince-admin.php:411
 msgid "Custom Menu"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:377
+#: inc/admin/class-envince-admin.php:416
 msgid "Translation Ready"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:382
+#: inc/admin/class-envince-admin.php:421
 msgid "WPML Compatible"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:387
+#: inc/admin/class-envince-admin.php:426
 msgid "The Events Calendar Compatible"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:392
+#: inc/admin/class-envince-admin.php:431
 msgid "Footer Copyright Editor"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:397
+#: inc/admin/class-envince-admin.php:436
 msgid "Footer Widgets Column"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:398 inc/admin/class-envince-admin.php:399
+#: inc/admin/class-envince-admin.php:437 inc/admin/class-envince-admin.php:438
 msgid "1,2,3,4 Columns"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:402
+#: inc/admin/class-envince-admin.php:441
 msgid "Demo Content"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:407
-#: inc/admin/customize-control-important-links.php:20
+#: inc/admin/class-envince-admin.php:446
 msgid "Support"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:408
+#: inc/admin/class-envince-admin.php:447
 msgid "Forum"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:409
+#: inc/admin/class-envince-admin.php:448
 msgid "Forum + Emails/Support Ticket"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:412
+#: inc/admin/class-envince-admin.php:451
 msgid "Unique Posts System"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:417
+#: inc/admin/class-envince-admin.php:456
 msgid "TG: Advertisement widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:422
+#: inc/admin/class-envince-admin.php:461
 msgid "TG: Featured Post Slider widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:427
+#: inc/admin/class-envince-admin.php:466
 msgid "TG: Image Grid Post widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:432
+#: inc/admin/class-envince-admin.php:471
 msgid "TG: Two Column Featured Post widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:437
+#: inc/admin/class-envince-admin.php:476
 msgid "TG: One Column Featured Post widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:442
+#: inc/admin/class-envince-admin.php:481
 msgid "TG: News Ticker Widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:447
+#: inc/admin/class-envince-admin.php:486
 msgid "TG: Post List Widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:452
+#: inc/admin/class-envince-admin.php:491
 msgid "TG: Post Carousel Widget"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:457
+#: inc/admin/class-envince-admin.php:496
 msgid "TG: Events Grid"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:462
+#: inc/admin/class-envince-admin.php:501
 msgid "TG: Single Post Slider"
 msgstr ""
 
-#: inc/admin/customize.php:75
-msgid "Envince Important Links"
+#: inc/admin/customize.php:112
+msgid "View PRO version"
 msgstr ""
 
-#: inc/admin/customize.php:89
-msgid "Important Links"
-msgstr ""
-
-#: inc/admin/customize.php:109
+#: inc/admin/customize.php:133
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/admin/customize.php:128
+#: inc/admin/customize.php:152
 msgid "Display Site Tagline"
 msgstr ""
 
-#: inc/admin/customize.php:152
+#: inc/admin/customize.php:176
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/admin/customize.php:164 library/admin/meta-box-post-layout.php:35
+#: inc/admin/customize.php:188 library/admin/meta-box-post-layout.php:35
 #: library/inc/functions-customize.php:72
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/customize.php:188
+#: inc/admin/customize.php:212
 msgid "Layout Sidebar"
 msgstr ""
 
-#: inc/admin/customize.php:209
+#: inc/admin/customize.php:233
 msgid "Layout Style"
 msgstr ""
 
-#: inc/admin/customize.php:234
+#: inc/admin/customize.php:258
 msgid "Layout Width"
 msgstr ""
 
-#: inc/admin/customize.php:258
+#: inc/admin/customize.php:282
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/admin/customize.php:262
+#: inc/admin/customize.php:286
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:263
+#: inc/admin/customize.php:287
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:264
+#: inc/admin/customize.php:288
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:265
+#: inc/admin/customize.php:289
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:274
+#: inc/admin/customize.php:298
 msgid "Header Info"
 msgstr ""
 
-#: inc/admin/customize.php:295
+#: inc/admin/customize.php:319
 msgid "Phone Number"
 msgstr ""
 
-#: inc/admin/customize.php:324
+#: inc/admin/customize.php:348
 msgid "Email"
 msgstr ""
 
-#: inc/admin/customize.php:353
+#: inc/admin/customize.php:377
 msgid "Location"
 msgstr ""
 
-#: inc/admin/customize.php:372
+#: inc/admin/customize.php:396
 msgid "Category Color Options"
 msgstr ""
 
-#: inc/admin/customize.php:374
+#: inc/admin/customize.php:398
 msgid "Change the color of each category items as you want."
 msgstr ""
 
-#: inc/admin/customize.php:382
+#: inc/admin/customize.php:406
 msgid "Category Color Settings"
 msgstr ""
 
-#: inc/admin/customize.php:428
+#: inc/admin/customize.php:452
 msgid "Additional Options"
 msgstr ""
 
-#: inc/admin/customize.php:434
+#: inc/admin/customize.php:458
 msgid "Related Posts"
 msgstr ""
 
-#: inc/admin/customize.php:444
+#: inc/admin/customize.php:468
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/admin/customize.php:455
+#: inc/admin/customize.php:479
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/admin/customize.php:459
+#: inc/admin/customize.php:483
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/admin/customize.php:460
+#: inc/admin/customize.php:484
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/admin/customize.php:468
+#: inc/admin/customize.php:492
 msgid "Miscellaneous Settings"
 msgstr ""
 
-#: inc/admin/customize.php:489
+#: inc/admin/customize.php:513
 msgid "Remove Featured Image from Single Post"
 msgstr ""
 
@@ -902,7 +892,7 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/demo-config.php:33
+#: inc/demo-config.php:31
 msgid "Envince Pro Food"
 msgstr ""
 
@@ -954,105 +944,118 @@ msgstr ""
 msgid "Footer Sidebar 4"
 msgstr ""
 
-#: inc/widgets/widgets.php:9
+#: inc/widgets/envince-728x90-advertisement-widget.php:11
 msgid "Add your Advertisement here"
 msgstr ""
 
-#: inc/widgets/widgets.php:17
+#: inc/widgets/envince-728x90-advertisement-widget.php:19
 msgid "TG: Advertisement"
 msgstr ""
 
-#: inc/widgets/widgets.php:39 inc/widgets/widgets.php:330
-#: inc/widgets/widgets.php:509 inc/widgets/widgets.php:689
+#: inc/widgets/envince-728x90-advertisement-widget.php:41
+#: inc/widgets/envince-imagegrid-posts.php:39
+#: inc/widgets/envince-onecol-posts.php:39
+#: inc/widgets/envince-twocol-posts.php:39
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widgets.php:42
+#: inc/widgets/envince-728x90-advertisement-widget.php:44
 msgid "Add your Advertisement 728x90 Images Here"
 msgstr ""
 
-#: inc/widgets/widgets.php:44
+#: inc/widgets/envince-728x90-advertisement-widget.php:46
 msgid "Advertisement Image Link "
 msgstr ""
 
-#: inc/widgets/widgets.php:48
+#: inc/widgets/envince-728x90-advertisement-widget.php:50
 msgid "Advertisement Image "
 msgstr ""
 
-#: inc/widgets/widgets.php:57
+#: inc/widgets/envince-728x90-advertisement-widget.php:59
 msgid "Choose an image"
 msgstr ""
 
-#: inc/widgets/widgets.php:57
+#: inc/widgets/envince-728x90-advertisement-widget.php:59
 msgid "Use image"
 msgstr ""
 
-#: inc/widgets/widgets.php:57
+#: inc/widgets/envince-728x90-advertisement-widget.php:59
 msgid "Select an Image"
 msgstr ""
 
-#: inc/widgets/widgets.php:120
+#: inc/widgets/envince-featured-posts-slider-widget.php:11
 msgid ""
 "Display latest posts or posts of specific category, which will be used as "
 "the slider."
 msgstr ""
 
-#: inc/widgets/widgets.php:126
+#: inc/widgets/envince-featured-posts-slider-widget.php:17
 msgid "TG: Featured Post Slider"
 msgstr ""
 
-#: inc/widgets/widgets.php:141 inc/widgets/widgets.php:337
-#: inc/widgets/widgets.php:516 inc/widgets/widgets.php:696
+#: inc/widgets/envince-featured-posts-slider-widget.php:32
+#: inc/widgets/envince-imagegrid-posts.php:46
+#: inc/widgets/envince-onecol-posts.php:46
+#: inc/widgets/envince-twocol-posts.php:46
 msgid "Number of posts to display:"
 msgstr ""
 
-#: inc/widgets/widgets.php:146 inc/widgets/widgets.php:342
-#: inc/widgets/widgets.php:521 inc/widgets/widgets.php:701
+#: inc/widgets/envince-featured-posts-slider-widget.php:37
+#: inc/widgets/envince-imagegrid-posts.php:51
+#: inc/widgets/envince-onecol-posts.php:51
+#: inc/widgets/envince-twocol-posts.php:51
 msgid "Show latest Posts"
 msgstr ""
 
-#: inc/widgets/widgets.php:147 inc/widgets/widgets.php:343
-#: inc/widgets/widgets.php:522 inc/widgets/widgets.php:702
+#: inc/widgets/envince-featured-posts-slider-widget.php:38
+#: inc/widgets/envince-imagegrid-posts.php:52
+#: inc/widgets/envince-onecol-posts.php:52
+#: inc/widgets/envince-twocol-posts.php:52
 msgid "Show posts from a category"
 msgstr ""
 
-#: inc/widgets/widgets.php:151 inc/widgets/widgets.php:347
-#: inc/widgets/widgets.php:526 inc/widgets/widgets.php:706
+#: inc/widgets/envince-featured-posts-slider-widget.php:42
+#: inc/widgets/envince-imagegrid-posts.php:56
+#: inc/widgets/envince-onecol-posts.php:56
+#: inc/widgets/envince-twocol-posts.php:56
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets/widgets.php:163 inc/widgets/widgets.php:353
-#: inc/widgets/widgets.php:532 inc/widgets/widgets.php:712
+#: inc/widgets/envince-featured-posts-slider-widget.php:54
+#: inc/widgets/envince-imagegrid-posts.php:62
+#: inc/widgets/envince-onecol-posts.php:62
+#: inc/widgets/envince-twocol-posts.php:62
 msgid "Check to display the posts from child category of the chosen category."
 msgstr ""
 
-#: inc/widgets/widgets.php:302
-msgid "Display latest posts or posts of specific category in two column layout."
-msgstr ""
-
-#: inc/widgets/widgets.php:310
-msgid "TG: Two Column Featured Post Widget"
-msgstr ""
-
-#: inc/widgets/widgets.php:334 inc/widgets/widgets.php:513
-#: inc/widgets/widgets.php:693
-msgid "Description"
-msgstr ""
-
-#: inc/widgets/widgets.php:481
-msgid "Display latest posts or posts of specific category in one column layout."
-msgstr ""
-
-#: inc/widgets/widgets.php:489
-msgid "TG: One Column Featured Post Widget"
-msgstr ""
-
-#: inc/widgets/widgets.php:661
+#: inc/widgets/envince-imagegrid-posts.php:11
 msgid "Display latest posts or posts of specific category in image grid."
 msgstr ""
 
-#: inc/widgets/widgets.php:669
+#: inc/widgets/envince-imagegrid-posts.php:19
 msgid "TG: Image Grid Post Widget"
+msgstr ""
+
+#: inc/widgets/envince-imagegrid-posts.php:43
+#: inc/widgets/envince-onecol-posts.php:43
+#: inc/widgets/envince-twocol-posts.php:43
+msgid "Description"
+msgstr ""
+
+#: inc/widgets/envince-onecol-posts.php:11
+msgid "Display latest posts or posts of specific category in one column layout."
+msgstr ""
+
+#: inc/widgets/envince-onecol-posts.php:19
+msgid "TG: One Column Featured Post Widget"
+msgstr ""
+
+#: inc/widgets/envince-twocol-posts.php:11
+msgid "Display latest posts or posts of specific category in two column layout."
+msgstr ""
+
+#: inc/widgets/envince-twocol-posts.php:19
+msgid "TG: Two Column Featured Post Widget"
 msgstr ""
 
 #: library/admin/meta-box-post-style.php:35
