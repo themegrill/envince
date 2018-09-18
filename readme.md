@@ -41,6 +41,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+## TBD ##
+* Remove - Backward compatible for header logo
+
 ### Version 1.2.1 - 2018-09-05 =
 * Update - Upsell link
 
