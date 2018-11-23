@@ -80,6 +80,9 @@ function envince_theme_setup() {
 	/* Support for title tag since WP 4.1 */
 	add_theme_support( 'title-tag' );
 
+	// Gutenberg layout support.
+	add_theme_support( 'align-wide' );
+
 	/* Post formats. */
 	add_theme_support(
 		'post-formats',
