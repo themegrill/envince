@@ -286,7 +286,7 @@ $layout_global = get_theme_mod('envince_sidebar','content-sidebar');
 		echo "col-md-8";
 	}
 	elseif ($layout == "full-width"){
-		echo "col-md-12";
+		echo "col-md-12 full-width";
 	}
 	else {
 		echo "col-md-6";
