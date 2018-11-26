@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Envince 1.2.1\n"
+"Project-Id-Version: Envince 1.2.2\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-09-06 05:18:49+00:00\n"
+"POT-Creation-Date: 2018-11-26 06:44:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Get started with Envince"
 msgstr ""
 
-#: inc/admin/class-envince-admin.php:118 inc/admin/customize.php:437
+#: inc/admin/class-envince-admin.php:118 inc/admin/customize.php:411
 msgid "%s"
 msgstr ""
 
@@ -403,104 +403,100 @@ msgstr ""
 msgid "Display Site Tagline"
 msgstr ""
 
-#: inc/admin/customize.php:176
-msgid "Logo Upload"
-msgstr ""
-
-#: inc/admin/customize.php:188 library/admin/meta-box-post-layout.php:35
+#: inc/admin/customize.php:162 library/admin/meta-box-post-layout.php:35
 #: library/inc/functions-customize.php:72
 msgid "Layout"
 msgstr ""
 
-#: inc/admin/customize.php:212
+#: inc/admin/customize.php:186
 msgid "Layout Sidebar"
 msgstr ""
 
-#: inc/admin/customize.php:233
+#: inc/admin/customize.php:207
 msgid "Layout Style"
 msgstr ""
 
-#: inc/admin/customize.php:258
+#: inc/admin/customize.php:232
 msgid "Layout Width"
 msgstr ""
 
-#: inc/admin/customize.php:282
+#: inc/admin/customize.php:256
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/admin/customize.php:286
+#: inc/admin/customize.php:260
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:287
+#: inc/admin/customize.php:261
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:288
+#: inc/admin/customize.php:262
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:289
+#: inc/admin/customize.php:263
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/admin/customize.php:298
+#: inc/admin/customize.php:272
 msgid "Header Info"
 msgstr ""
 
-#: inc/admin/customize.php:319
+#: inc/admin/customize.php:293
 msgid "Phone Number"
 msgstr ""
 
-#: inc/admin/customize.php:348
+#: inc/admin/customize.php:322
 msgid "Email"
 msgstr ""
 
-#: inc/admin/customize.php:377
+#: inc/admin/customize.php:351
 msgid "Location"
 msgstr ""
 
-#: inc/admin/customize.php:396
+#: inc/admin/customize.php:370
 msgid "Category Color Options"
 msgstr ""
 
-#: inc/admin/customize.php:398
+#: inc/admin/customize.php:372
 msgid "Change the color of each category items as you want."
 msgstr ""
 
-#: inc/admin/customize.php:406
+#: inc/admin/customize.php:380
 msgid "Category Color Settings"
 msgstr ""
 
-#: inc/admin/customize.php:452
+#: inc/admin/customize.php:426
 msgid "Additional Options"
 msgstr ""
 
-#: inc/admin/customize.php:458
+#: inc/admin/customize.php:432
 msgid "Related Posts"
 msgstr ""
 
-#: inc/admin/customize.php:468
+#: inc/admin/customize.php:442
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/admin/customize.php:479
+#: inc/admin/customize.php:453
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/admin/customize.php:483
+#: inc/admin/customize.php:457
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/admin/customize.php:484
+#: inc/admin/customize.php:458
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/admin/customize.php:492
+#: inc/admin/customize.php:466
 msgid "Miscellaneous Settings"
 msgstr ""
 
-#: inc/admin/customize.php:513
+#: inc/admin/customize.php:487
 msgid "Remove Featured Image from Single Post"
 msgstr ""
 
