@@ -144,9 +144,12 @@ class envince_twocol_posts extends WP_Widget {
 				if( has_post_thumbnail() ) {
 					$image = '';
 					$title_attribute = get_the_title( $post->ID );
+					$image_id        = get_post_thumbnail_id( get_the_ID() );
+					$image_alt       = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+					$image_alt_text  = ! empty( $image_alt ) ? $image_alt : $title_attribute;
 					$image .= '<figure>';
 					$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">';
-					$image .= get_the_post_thumbnail( $post->ID, $featured, array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
+					$image .= get_the_post_thumbnail( $post->ID, $featured, array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $image_alt_text ) ) ).'</a>';
 					$image .= '</figure>';
 					echo $image;
 				}
