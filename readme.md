@@ -41,6 +41,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+### Version TBD
+* Tweak - Add alt attributes to missed img tags
+
 ### Version 1.2.2 - 2018-11-26 =
 * Added - Gutenberg compatibility
 * Remove - Backward compatible for header logo
