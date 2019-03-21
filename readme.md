@@ -43,6 +43,7 @@ Envince is distributed under the terms of the GNU GPL
 ## Changelog
 ### Version TBD
 * Tweak - Add alt attributes to missed img tags
+* Update - BxSlider to 4.2.15
 
 ### Version 1.2.2 - 2018-11-26 =
 * Added - Gutenberg compatibility
