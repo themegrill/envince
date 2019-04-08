@@ -59,7 +59,17 @@
 
 			<h3 class="attachment-meta-title"><?php _e( 'Image Info', 'envince' ); ?></h3>
 
-			<?php hybrid_media_meta(); ?>
+			<?php $pre = '<li><span class="prep">%s</span>'; ?>
+			<?php hybrid_media_meta( 'dimensions', array( 'before' => sprintf( $pre, esc_html__( 'Dimensions:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'created_timestamp', array( 'before' => sprintf( $pre, esc_html__( 'Date:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'camera', array( 'before' => sprintf( $pre, esc_html__( 'Camera:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'aperture', array( 'before' => sprintf( $pre, esc_html__( 'Aperture:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'focal_length', array( 'before' => sprintf( $pre, esc_html__( 'Focal Length:', 'envince' ) ), 'after' => '</li>', 'text' => esc_html__( '%s mm', 'envince' ) ) ); ?>
+			<?php hybrid_media_meta( 'iso', array( 'before' => sprintf( $pre, esc_html__( 'ISO:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'shutter_speed', array( 'before' => sprintf( $pre, esc_html__( 'Shutter Speed:', 'envince' ) ), 'after' => '</li>', 'text' => esc_html__( '%s sec', 'envince' ) ) ); ?>
+			<?php hybrid_media_meta( 'file_type', array( 'before' => sprintf( $pre, esc_html__( 'Type:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'file_name', array( 'before' => sprintf( $pre, esc_html__( 'Name:', 'envince' ) ), 'after' => '</li>' ) ); ?>
+			<?php hybrid_media_meta( 'mime_type', array( 'before' => sprintf( $pre, esc_html__( 'Mime Type:', 'envince' ) ), 'after' => '</li>' ) ); ?>
 
 		</div><!-- .media-info -->
 

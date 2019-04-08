@@ -348,6 +348,18 @@ object {
     text-transform: uppercase;
 }
 
+.media-info .attachment-meta-title {
+    margin-bottom: 5px
+}
+
+.media-info.image-info li {
+    list-style: none;
+}
+
+.media-info.image-info li > span {
+    margin-right: 5px;
+}
+
 
 /* Clearing Floats */
 
