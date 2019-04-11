@@ -41,6 +41,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+### TBD 
+* Fix - PHP error for breadcrumb on day archive for paginated pages.
+
 ### Version 1.2.3 - 2019-03-26 
 * Tweak - Add alt attributes to missed img tags
 * Update - BxSlider to 4.2.15
