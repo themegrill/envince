@@ -41,7 +41,7 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
-### TBD 
+### Version 1.2.4 - 2019-04-11 
 * Fix - PHP error for breadcrumb on day archive for paginated pages.
 
 ### Version 1.2.3 - 2019-03-26 
