@@ -7,6 +7,12 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+?>
+
 	<div id="container">
 
 		<div class="skip-link">
