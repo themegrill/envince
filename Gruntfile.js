@@ -73,7 +73,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'envince.zip'
+				archive: 'dist/envince.zip'
 			},
 			files: {
 				src: [
