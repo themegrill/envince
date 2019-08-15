@@ -234,19 +234,19 @@ jQuery( document ).ready( function() {
 	}
 
 	/**
-	 * Sets or removes .focus class on an element.
+	 * Sets or removes .open class on an element.
 	 */
 	function toggleFocus() {
 		var self = this;
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
-			// On li elements toggle the class .focus.
+		// Move up through the ancestors of the current link until we hit .navbar-nav.
+		while ( -1 === self.className.indexOf( 'navbar-nav' ) ) {
+			// On li elements toggle the class .open.
 			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
+				if ( -1 !== self.className.indexOf( 'open' ) ) {
+					self.className = self.className.replace( ' open', '' );
 				} else {
-					self.className += ' focus';
+					self.className += ' open';
 				}
 			}
 
