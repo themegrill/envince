@@ -188,6 +188,9 @@ function envince_enqueue_scripts() {
 
 	wp_enqueue_script( 'envince-bxslider' );
 
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'freedom-skip-link-focus-fix', trailingslashit( get_template_directory_uri() ) . 'js/skip-link-focus-fix.js', array(), false, true );
+
 	/* Loads theme specific js file */
 	wp_register_script( 'envince', trailingslashit( get_template_directory_uri() ) . "js/theme.js", array( 'jquery' ), null, true );
 

@@ -213,3 +213,44 @@ jQuery( document ).ready( function() {
    });  // end section function
 
 } );
+
+( function() {
+	var container, menu, links, i, len;
+
+	container = document.getElementById( 'menu-primary' );
+	if ( ! container ) {
+		return;
+	}
+
+	menu = container.getElementsByTagName( 'ul' )[0];
+
+	// Get all the link elements within the menu.
+	links = menu.getElementsByTagName( 'a' );
+
+	// Each time a menu link is focused or blurred, toggle focus.
+	for ( i = 0, len = links.length; i < len; i++ ) {
+		links[i].addEventListener( 'focus', toggleFocus, true );
+		links[i].addEventListener( 'blur', toggleFocus, true );
+	}
+
+	/**
+	 * Sets or removes .open class on an element.
+	 */
+	function toggleFocus() {
+		var self = this;
+
+		// Move up through the ancestors of the current link until we hit .navbar-nav.
+		while ( -1 === self.className.indexOf( 'navbar-nav' ) ) {
+			// On li elements toggle the class .open.
+			if ( 'li' === self.tagName.toLowerCase() ) {
+				if ( -1 !== self.className.indexOf( 'open' ) ) {
+					self.className = self.className.replace( ' open', '' );
+				} else {
+					self.className += ' open';
+				}
+			}
+
+			self = self.parentElement;
+		}
+	}
+} )();
