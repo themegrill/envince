@@ -33,6 +33,7 @@ new Hybrid();
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-envince-admin.php';
 	require get_template_directory() . '/inc/admin/class-envince-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-envince-theme-review-notice.php';
 }
 
 /* Do theme setup on the 'after_setup_theme' hook. */
