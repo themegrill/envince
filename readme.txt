@@ -41,6 +41,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
+= Version TBD =
+* Tweak - Add review notice message.
+
 = Version 1.2.5 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
 
