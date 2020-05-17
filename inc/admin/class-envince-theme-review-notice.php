@@ -4,7 +4,7 @@
  *
  * @author  ThemeGrill
  * @package Envince
- * @since   1.2.0
+ * @since   1.2.6
  */
 
 // Exit if accessed directly.
