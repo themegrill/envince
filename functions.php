@@ -29,12 +29,6 @@ require_once( $envince_dir . 'library/hybrid.php' );
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
-/* Load the About page */
-if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-envince-admin.php';
-	require get_template_directory() . '/inc/admin/class-envince-tdi-notice.php';
-}
-
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'envince_theme_setup', 5 );
 
@@ -161,6 +155,13 @@ if ( ! function_exists( 'envince_the_custom_logo' ) ) {
  */
 if ( class_exists( 'TG_Demo_Importer' ) ) {
 	require get_template_directory() . '/inc/demo-config.php';
+}
+
+/* Calling in the admin area notices and about page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-envince-admin.php';
+	require get_template_directory() . '/inc/admin/class-envince-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-envince-welcome-notice.php';
 }
 
 /**
