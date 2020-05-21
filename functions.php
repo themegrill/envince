@@ -168,6 +168,7 @@ define( 'ENVINCE_THEME_VERSION', $envince_theme->get( 'Version' ) );
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-envince-admin.php';
 	require get_template_directory() . '/inc/admin/class-envince-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-envince-notice.php';
 	require get_template_directory() . '/inc/admin/class-envince-welcome-notice.php';
 	require get_template_directory() . '/inc/admin/class-envince-theme-review-notice.php';
 }
