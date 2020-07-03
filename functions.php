@@ -84,6 +84,12 @@ function envince_theme_setup() {
 	// Gutenberg layout support.
 	add_theme_support( 'align-wide' );
 
+	// Add support for Block Styles.
+	add_theme_support('wp-block-styles');
+
+	// Responsive embeds support.
+	add_theme_support('responsive-embeds');
+
 	/* Post formats. */
 	add_theme_support(
 		'post-formats',
