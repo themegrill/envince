@@ -1,0 +1,20 @@
+/* Basic Block Editor CSS */
+.editor-styles-wrapper {
+	background-color: #ffffff;
+	color: #6B6B6B;
+	font-size: 14px;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	line-height: 1.7;
+	word-wrap: break-word;
+}
+
+.editor-styles-wrapper > * {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	color: #6B6B6B;
+}
+
+.editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
+	color: #444;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
