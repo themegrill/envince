@@ -214,11 +214,25 @@ textarea {
     width: 100%;
 }
 
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
     border: 2px dashed;
+    border-style: solid;
+    border-color: #eaeaea #eaeaea #eaeaea #000;
     outline: 10px solid;
     padding: 0px 20px;
     margin: 30px 0;
+}
+
+.wp-block-quote.has-text-align-center {
+	border-left: 1px solid #fff;
+}
+
+.wp-block-quote.has-text-align-right {
+	border-left: 1px solid #eaeaea;
+	border-right: 4px solid #000;
 }
 
 blockquote,
