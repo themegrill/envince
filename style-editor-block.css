@@ -35,39 +35,39 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-    margin: 0;
-    padding: 0;
-    color: #000;
+	margin: 0;
+	padding: 0;
+	color: #000;
 }
 
 .editor-styles-wrapper h1,
 .editor-styles-wrapper b .h1 {
-    font-size: 32px;
+	font-size: 32px;
 }
 
 .editor-styles-wrapper h2,
 .editor-styles-wrapper .h2 {
-    font-size: 28px;
+	font-size: 28px;
 }
 
 .editor-styles-wrapper h3,
 .editor-styles-wrapper .h3 {
-    font-size: 24px;
+	font-size: 24px;
 }
 
 .editor-styles-wrapper h4,
 .editor-styles-wrapper .h4 {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .editor-styles-wrapper h5,
 .editor-styles-wrapper .h5 {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .h6 {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .editor-styles-wrapper p {
@@ -77,29 +77,29 @@
 
 .editor-styles-wrapper input[type="checkbox"],
 .editor-styles-wrapper input[type="radio"] {
-    padding: 0;
-    /* Addresses excess padding in IE8/9 */
+	padding: 0;
+	/* Addresses excess padding in IE8/9 */
 }
 
 .editor-styles-wrapper input[type="search"] {
-    -webkit-appearance: textfield;
-    /* Addresses appearance set to searchfield in S5, Chrome */
-    -webkit-box-sizing: content-box;
-    /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+	-webkit-appearance: textfield;
+	/* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box;
+	/* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 .editor-styles-wrapper input[type="search"]::-webkit-search-decoration {
-    /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-    -webkit-appearance: none;
+	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
 }
 
 .editor-styles-wrapper button::-moz-focus-inner,
 .editor-styles-wrapper input::-moz-focus-inner {
-    /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-    border: 0;
-    padding: 0;
+	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
 }
 
 .editor-styles-wrapper input[type="text"],
@@ -108,9 +108,9 @@
 .editor-styles-wrapperinput[type="password"],
 .editor-styles-wrapper input[type="search"],
 .editor-styles-wrapper textarea {
-    color: #666;
-    border: 1px solid #E8E8E8;
-    border-radius: 3px;
+	color: #666;
+	border: 1px solid #E8E8E8;
+	border-radius: 3px;
 }
 
 .editor-styles-wrapper input[type="text"]:focus,
@@ -119,7 +119,7 @@
 .editor-styles-wrapper input[type="password"]:focus,
 .editor-styles-wrapper input[type="search"]:focus,
 .editor-styles-wrapper textarea:focus {
-    color: #111;
+	color: #111;
 }
 
 .editor-styles-wrapper input[type="text"],
@@ -127,14 +127,14 @@
 .editor-styles-wrapper input[type="url"],
 .editor-styles-wrapper input[type="password"],
 .editor-styles-wrapper input[type="search"] {
-    padding: 3px;
+	padding: 3px;
 }
 
 .editor-styles-wrapper textarea {
-    overflow: auto;
-    padding-left: 3px;
-    vertical-align: top;
-    width: 100%;
+	overflow: auto;
+	padding-left: 3px;
+	vertical-align: top;
+	width: 100%;
 }
 
 .editor-styles-wrapper blockquote,
@@ -147,15 +147,14 @@
 	margin: 30px 0;
 }
 
-
 .editor-styles-wrapper blockquote,
 .editor-styles-wrapper blockquote a:hover,
 .editor-styles-wrapper blockquote a:focus,
 .editor-styles-wrapper .entry-content blockquote a:hover,
 .editor-styles-wrapper .entry-content blockquote a:focus,
 .editor-styles-wrapper .wp-calendar td.has-posts a {
-    color: #ffffff;
-    background-color: #2EBDFF;
+	color: #ffffff;
+	background-color: #2EBDFF;
 }
 
 .editor-styles-wrapper html input[type="button"],
@@ -166,58 +165,58 @@
 	font-size: 12px;
 	border: 0 none;
 	color: #fff;
-	padding:  5px 12px;
-	transition:  background-color 0.3s linear;
+	padding: 5px 12px;
+	transition: background-color 0.3s linear;
 }
 
 .editor-styles-wrapper html input[type="button"]:hover,
 .editor-styles-wrapper input[type="reset"]:hover,
 .editor-styles-wrapper input[type="submit"]:hover {
 	background-color: #363636;
-	transition:  background-color 0.3s linear;
+	transition: background-color 0.3s linear;
 }
 
 /* Alignment */
 
 .editor-styles-wrapper .alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
 }
 
 .editor-styles-wrapper .alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
 }
 
 .editor-styles-wrapper .aligncenter {
-    clear: both;
-    display: block;
-    margin: 0 auto;
+	clear: both;
+	display: block;
+	margin: 0 auto;
 	text-align: center;
 }
 
 /* Embeds */
 
 .editor-styles-wrapper .embed-wrap {
-    position: relative;
-    margin-bottom: 24px;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+	position: relative;
+	margin-bottom: 24px;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
 }
 
 .editor-styles-wrapper .embed-wrap iframe,
 .editor-styles-wrapper .embed-wrap object,
 .editor-styles-wrapper .embed-wrap embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -225,5 +224,5 @@
 .editor-styles-wrapper embed,
 .editor-styles-wrapper iframe,
 .editor-styles-wrapper object {
-    max-width: 100%;
+	max-width: 100%;
 }
