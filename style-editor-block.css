@@ -74,11 +74,6 @@
 	margin: 0 0 30px;
 }
 
-.editor-styles-wrapper input[type="checkbox"],
-.editor-styles-wrapper input[type="radio"] {
-	padding: 0;
-}
-
 .editor-styles-wrapper input[type="search"] {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
