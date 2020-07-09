@@ -15,8 +15,9 @@
 
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
 	color: #444;
-	margin-bottom: 10px;
 	font-weight: normal;
+	font-size: 32px;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
 .wp-block {
@@ -68,6 +69,11 @@
 .editor-styles-wrapper .h6 {
     font-size: 14px;
 }
+
+.editor-styles-wrapper p {
+	margin: 0 0 30px;
+}
+
 
 .editor-styles-wrapper input[type="checkbox"],
 .editor-styles-wrapper input[type="radio"] {
@@ -126,10 +132,8 @@
 
 .editor-styles-wrapper textarea {
     overflow: auto;
-    /* Removes default vertical scrollbar in IE6/7/8/9 */
     padding-left: 3px;
     vertical-align: top;
-    /* Improves readability and alignment in all browsers */
     width: 100%;
 }
 
@@ -137,22 +141,12 @@
 .editor-styles-wrapper .wp-block-quote,
 .editor-styles-wrapper .wp-block-quote.is-style-large,
 .editor-styles-wrapper .wp-block-quote.has-text-align-right {
-    border: 2px dashed;
-    border-style: solid;
-    border-color: #eaeaea #eaeaea #eaeaea #000;
-    outline: 10px solid;
-    padding: 0px 20px;
-    margin: 30px 0;
+	border: 2px dashed;
+	outline: 10px solid;
+	padding: 0px 20px;
+	margin: 30px 0;
 }
 
-.editor-styles-wrapper .wp-block-quote.has-text-align-center {
-	border-left: 1px solid #fff;
-}
-
-.editor-styles-wrapper .wp-block-quote.has-text-align-right {
-	border-left: 1px solid #eaeaea;
-	border-right: 4px solid #000;
-}
 
 .editor-styles-wrapper blockquote,
 .editor-styles-wrapper blockquote a:hover,
@@ -201,6 +195,7 @@
     clear: both;
     display: block;
     margin: 0 auto;
+	text-align: center;
 }
 
 /* Embeds */
