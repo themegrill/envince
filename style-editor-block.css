@@ -74,30 +74,24 @@
 	margin: 0 0 30px;
 }
 
-
 .editor-styles-wrapper input[type="checkbox"],
 .editor-styles-wrapper input[type="radio"] {
 	padding: 0;
-	/* Addresses excess padding in IE8/9 */
 }
 
 .editor-styles-wrapper input[type="search"] {
 	-webkit-appearance: textfield;
-	/* Addresses appearance set to searchfield in S5, Chrome */
 	-webkit-box-sizing: content-box;
-	/* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
 .editor-styles-wrapper input[type="search"]::-webkit-search-decoration {
-	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
 
 .editor-styles-wrapper button::-moz-focus-inner,
 .editor-styles-wrapper input::-moz-focus-inner {
-	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 	padding: 0;
 }
@@ -197,32 +191,26 @@
 	text-align: center;
 }
 
-/* Embeds */
-
-.editor-styles-wrapper .embed-wrap {
-	position: relative;
-	margin-bottom: 24px;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-.editor-styles-wrapper .embed-wrap iframe,
-.editor-styles-wrapper .embed-wrap object,
-.editor-styles-wrapper .embed-wrap embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	max-width: 100%;
-	height: 100%;
-}
-
 /* Make sure embeds and iframes fit their containers */
-
 .editor-styles-wrapper embed,
 .editor-styles-wrapper iframe,
 .editor-styles-wrapper object {
 	max-width: 100%;
+}
+
+/* Links */
+.editor-styles-wrapper a {
+	color: #428bca;
+	text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:focus {
+	color: #2a6496;
+	text-decoration: none;
+}
+
+.editor-styles-wrapper a:focus {
+	outline: thin dotted;
+	outline-offset: -2px;
 }
