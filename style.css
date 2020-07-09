@@ -1611,8 +1611,8 @@ li.recentcomments {
 /* CSS for gutenberg compatibility
 ----------------------------------------------- */
 .full-width .entry-content > .alignfull {
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 49vw);
+	margin-right: calc(50% - 49vw);
 	max-width: unset;
 }
 
