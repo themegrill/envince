@@ -33,8 +33,8 @@ function print_custom_css() {
 	} else {
 
 		/* Adding custom css based on customizer setting */
-		$layout_style = get_theme_mod('envince_layout_style');
-		$layout_width = get_theme_mod('envince_layout_width');
+		$layout_style = get_theme_mod('envince_layout_style', 'boxed');
+		$layout_width = get_theme_mod('envince_layout_width', '1170');
 		$layout_width_min = '';
 
 		if($layout_width == "1600"){
