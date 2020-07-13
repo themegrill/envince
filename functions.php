@@ -176,13 +176,6 @@ if ( ! function_exists( 'envince_the_custom_logo' ) ) {
 }
 
 /**
- * Load Demo Importer Configs.
- */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
-}
-
-/**
  * Display the related posts
  */
 if ( ! function_exists( 'envince_related_posts_function' ) ) {
