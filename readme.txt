@@ -30,8 +30,8 @@ Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
 = Version 1.2.6 - 2020-07-14 =
-* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Enhancement - Gutenberg compatibility.
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.2.5 - 2020-02-20 =
