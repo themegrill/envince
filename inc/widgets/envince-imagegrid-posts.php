@@ -165,7 +165,7 @@ class envince_imagegrid_posts extends WP_Widget {
 							echo $image;
 						} else { ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/default.png">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/default.png">
 							</a>
 						<?php }
 						?>

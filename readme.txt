@@ -23,18 +23,6 @@ The following resources are included/used for making the theme package.
 
 * [Bx Slider](http://bxslider.com/) by Steven Wanderski - Licensed under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
-* Images in screenshot are taken from http://pixabay.com/ - Licensed under [CCO License]
-
-Painter: https://pixabay.com/en/painter-artist-man-work-painting-931711/
-Girl in Pink dress: https://pixabay.com/en/dress-girl-beautiful-woman-hands-864107/
-Old Car: https://pixabay.com/en/cuba-old-car-forest-red-sepia-1197800/
-Pet Dog: https://pixabay.com/en/dog-model-french-bulldog-view-1224267/
-Girl wit Black Glasses: https://pixabay.com/en/woman-model-sunlight-sunglasses-422706/
-Programming with Patience: https://pixabay.com/en/macbook-apple-imac-computer-screen-606763/
-Two kids: https://pixabay.com/en/model-arsa-aroni-photography-956676/
-Photgrapher: https://pixabay.com/en/photographers-scenery-nature-1150033/
-Girl in header ad image: https://pixabay.com/en/mobile-phone-mobile-smartphone-791644/
-
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.html), version 3 or later.
 
 Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
