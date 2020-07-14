@@ -218,3 +218,15 @@ if ( ! function_exists( 'envince_related_posts_function' ) ) {
 
 	}
 }
+
+add_filter( 'body_class', 'envince_body_class' );
+
+function envince_body_class( $classes )
+{
+	if ( get_theme_mod( 'envince_layout_style', 'box' ) == 'wide' ) {
+		$classes[] = 'wide';
+	} else {
+		$classes[] = 'boxed';
+	}
+	return $classes;
+}

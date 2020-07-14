@@ -237,17 +237,6 @@ function hybrid_body_class_filter( $classes, $class ) {
 	if ( current_theme_supports( 'theme-layouts' ) )
 		$classes[] = sanitize_html_class( 'layout-' . hybrid_get_theme_layout() );
 
-	add_filter( 'body_class', 'envince_body_class' );
-
-	function envince_body_class( $classes ) {
-		if ( get_theme_mod( 'envince_layout_style', 'box' ) == 'wide' ) {
-			$classes[] = 'wide';
-		} else {
-			$classes[] = 'boxed';
-		}
-		return $classes;
-	}
-
 	// Input class.
 	if ( $class ) {
 		$class   = is_array( $class ) ? $class : preg_split( '#\s+#', $class );
