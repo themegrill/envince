@@ -29,12 +29,10 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
-= TBD =
-* Enhancement - Update protocol to prevent not secure issue.
-
-= Version 1.2.6 - 2020-07-14 =
+= Version 1.2.6 - 2020-07-17 =
 * Enhancement - Gutenberg compatibility.
 * Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Tweak - Change http protocol to https.
 * Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.2.5 - 2020-02-20 =

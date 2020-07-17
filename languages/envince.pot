@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Envince 1.2.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-07-14 03:07:29+00:00\n"
+"POT-Creation-Date: 2020-07-17 04:38:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1192,7 +1192,7 @@ msgid "(Untitled)"
 msgstr ""
 
 #: library/inc/template-general.php:55
-msgid "http://wordpress.org"
+msgid "https://wordpress.org"
 msgstr ""
 
 #: library/inc/template-general.php:55
