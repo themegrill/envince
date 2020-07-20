@@ -41,6 +41,10 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 ## Changelog
+### Version TBD
+* Enhancement - Update protocol to prevent not secure issue.
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+
 ### Version 1.2.5 - 2020-02-20
 * Tweak - Update `screen-reader-text` CSS.
 

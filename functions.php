@@ -78,6 +78,12 @@ function envince_theme_setup() {
 	// Gutenberg layout support.
 	add_theme_support( 'align-wide' );
 
+	// Add support for Block Styles.
+	add_theme_support('wp-block-styles');
+
+	// Responsive embeds support.
+	add_theme_support('responsive-embeds');
+
 	/* Post formats. */
 	add_theme_support(
 		'post-formats',
@@ -101,6 +107,19 @@ function envince_theme_setup() {
 
 /* Load bootstrap css and js files */
 add_action( 'wp_enqueue_scripts', 'envince_scripts', 1 );
+
+/**
+ * Enqueue block editor styles.
+ *
+ * @since Envince 1.2.6
+ */
+function envince_block_editor_styles()
+{
+	wp_enqueue_style('envince-editor-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans');
+	wp_enqueue_style('envince-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css');
+}
+add_action('enqueue_block_editor_assets', 'envince_block_editor_styles', 1, 1);
+
 
 /**
  * Tells WordPress to load the scripts needed for the framework using the wp_enqueue_script() function.
@@ -216,4 +235,16 @@ if ( ! function_exists( 'envince_related_posts_function' ) ) {
 		return $query;
 
 	}
+}
+
+add_filter( 'body_class', 'envince_body_class' );
+
+function envince_body_class( $classes )
+{
+	if ( get_theme_mod( 'envince_layout_style', 'box' ) == 'wide' ) {
+		$classes[] = 'wide';
+	} else {
+		$classes[] = 'boxed';
+	}
+	return $classes;
 }
