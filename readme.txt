@@ -31,6 +31,7 @@ Envince is distributed under the terms of the GNU GPL
 == Changelog ==
 = TBD =
 * Tweak - Add and improve theme-related notices.
+* Remove - TGMPA library to recommend plugins
 
 = Version 1.2.6 - 2020-07-17 =
 * Enhancement - Gutenberg compatibility.
