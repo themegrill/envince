@@ -170,7 +170,7 @@ if ( ! function_exists( 'envince_the_custom_logo' ) ) {
 }
 
 /**
- * Assign the FoodHunt version to a variable.
+ * Assign the Envince version to a variable.
  */
 $envince_theme = wp_get_theme( 'envince' );
 

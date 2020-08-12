@@ -18,8 +18,7 @@ class Envince_Notice {
 	 * @param string $dismiss_url Notice permanent dismiss URL.
 	 * @param string $temporary_dismiss_url Notice temporary dismiss URL.
 	 *
-	 * @since 1.2.6
-	 *
+	 * @since 1.2.7
 	 */
 	public function __construct( $name, $type, $dismiss_url, $temporary_dismiss_url ) {
 		$this->name                  = $name;
