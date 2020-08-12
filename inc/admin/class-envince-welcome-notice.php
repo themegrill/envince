@@ -42,7 +42,7 @@ class Envince_Welcome_Notice {
 
 			<div class="envince-message__content">
 				<div class="envince-message__image">
-					<img class="envince-screenshot" src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" alt="<?php esc_html_e( 'Envince', 'envince' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img class="envince-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Envince', 'envince' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 
 				<div class="envince-message__text">
@@ -59,7 +59,7 @@ class Envince_Welcome_Notice {
 
 					<div class="envince-message__cta">
 						<?php echo $this->import_button_html(); ?>
-						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the ThemeGrill demo importer plugin.', 'imalayas' ); ?></span>
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the ThemeGrill demo importer plugin.', 'envince' ); ?></span>
 					</div>
 				</div>
 			</div>
