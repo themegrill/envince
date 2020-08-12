@@ -24,9 +24,6 @@ add_filter( 'get_calendar', 'envince_get_calendar' );
 /* Adds bootstrap caption style */
 add_filter('img_caption_shortcode', 'envince_caption', 10, 3);
 
-/* Adds TGM Activation plugin */
-add_action( 'tgmpa_register', 'envince_register_required_plugins' );
-
 /* Get the template directory and make sure it has a trailing slash. */
 $envince_inc = trailingslashit( get_template_directory() );
 
@@ -39,7 +36,6 @@ require_once( $envince_inc . 'inc/admin/customize.php'    		  			);
 require_once( $envince_inc . 'inc/admin/metabox.php'    		  			);
 require_once( $envince_inc . 'inc/classes/bootstrap_nav_walker.php' 		);
 require_once( $envince_inc . 'inc/classes/bootstrap_nav_walker_select.php' 	);
-require_once( $envince_inc . 'inc/classes/class-tgm-plugin-activation.php' 	);
 require_once( $envince_inc . 'inc/widgets/widgets.php' 	);
 
 /**
@@ -449,71 +445,6 @@ function envince_home_img_status() {
 	} else {
 		return '';
 	}
-}
-
-/**
- * Register the required plugins for this theme.
- *
- * The variable passed to tgmpa_register_plugins() should be an array of plugin
- * arrays.
- *
- * This function is hooked into tgmpa_init, which is fired within the
- * TGM_Plugin_Activation class constructor.
- */
-function envince_register_required_plugins() {
-	/*
-	 * Array of plugin arrays. Required keys are name and slug.
-	 * If the source is NOT from the .org repo, then source is also required.
-	 */
-	$plugins = array(
-
-		// This is an example of how to include a plugin bundled with a theme.
-		array(
-			'name'               => 'Page Builder by SiteOrigin', // The plugin name.
-			'slug'               => 'siteorigin-panels', // The plugin slug (typically the folder name).
-			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-		),
-
-		// Include ThemeGrill Demo Importer as recommended
-		array(
-			'name'      => 'ThemeGrill Demo Importer',
-			'slug'      => 'themegrill-demo-importer',
-			'required'  => false,
-		),
-
-		// Recommend evfs plugin.
-		array(
-			'name'               => 'Everest Forms – Easy Contact Form and Form Builder',
-			'slug'               => 'everest-forms',
-			'required'           => false,
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-		),
-
-	);
-
-	/*
-	 * Array of configuration settings. Amend each line as needed.
-	 *
-	 * TGMPA will start providing localized text strings soon. If you already have translations of our standard
-	 * strings available, please help us make TGMPA even better by giving us access to these translations or by
-	 * sending in a pull-request with .po file(s) with the translations.
-	 *
-	 * Only uncomment the strings in the config array if you want to customize the strings.
-	 */
-	$config = array(
-		'id'           => 'envince',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
-		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-		'message'      => '',                      // Message to output right before the plugins table.
-	);
-
-	tgmpa( $plugins, $config );
 }
 
 /**
