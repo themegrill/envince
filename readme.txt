@@ -12,6 +12,7 @@ Envince is bootstrap 3 powered magazine wp theme to make your site look good. Cr
 == Copyright and License ==
 
 The following resources are included/used for making the theme package.
+* Images on screenshot is from https://pxhere.com/ link. License under Creative Commons Zero (CC0)
 
 * [Hybrid Base Theme](https://github.com/justintadlock/hybrid-base) by Justin Tadlock - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
