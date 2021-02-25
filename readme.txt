@@ -30,9 +30,11 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
+= TBD =
+* Tweak - Update screenshot image.
+
 = Version 1.2.8 - 2020-12-17 =
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
-* Tweak - Update screenshot image.
 
 = Version 1.2.7 - 2020-08-12 =
 * Tweak - Add and improve theme-related notices.
