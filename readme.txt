@@ -30,7 +30,7 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
-= TBD =
+= Version 1.2.9 - 2021-02-25 =
 * Tweak - Update screenshot image.
 
 = Version 1.2.8 - 2020-12-17 =
