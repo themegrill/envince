@@ -78,8 +78,8 @@ class Envince_Upgrade_Notice extends Envince_Notice {
 					),
 					'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
 					'Envince',
-					'<code class="coupon-code">upgrade15</code>',
-					'15%'
+					'<code class="coupon-code">TGFREEUSER</code>',
+					'25%'
 				);
 				?>
 			</p>
