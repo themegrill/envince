@@ -45,9 +45,18 @@ class Envince_Theme_Review_Notice {
 	 */
 	public function review_notice_markup() {
 		$user_id                  = get_current_user_id();
-		$current_user             = wp_get_current_user();
 		$ignored_notice           = get_user_meta( $user_id, 'envince_ignore_theme_review_notice', true );
 		$ignored_notice_partially = get_user_meta( $user_id, 'nag_envince_ignore_theme_review_notice_partially', true );
+		$dismiss_url              = wp_nonce_url(
+			add_query_arg( 'nag_envince_ignore_theme_review_notice', 0 ),
+			'nag_envince_ignore_theme_review_notice_nonce',
+			'_envince_ignore_theme_review_notice_nonce'
+		);
+		$temporary_dismiss_url    = wp_nonce_url(
+			add_query_arg( 'nag_envince_ignore_theme_review_notice_partially', 0 ),
+			'nag_envince_ignore_theme_review_notice_partially_nonce',
+			'_envince_ignore_theme_review_notice_nonce'
+		);
 
 		/**
 		 * Return from notice display if:
@@ -56,47 +65,77 @@ class Envince_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'envince_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'envince_theme_installed_time' ) > strtotime( '0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
 		<div class="notice notice-success envince-notice theme-review-notice" style="position:relative;">
-			<p>
-				<?php
-				printf(
-					/* Translators: %1$s current user display name. */
-					esc_html__(
-						'Howdy, %1$s! It seems that you have been using this theme for more than 15 days. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!',
-						'envince'
-					),
-					'<strong>' . esc_html( $current_user->display_name ) . '</strong>'
-				);
-				?>
-			</p>
+			<div class="envince-message__content">
+				<div class="envince-message__image">
+					<img class="envince-logo--png" src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/img/envince-square-logo.png' ); ?>" alt="<?php esc_attr_e( 'Envince', 'envince' ); ?>" />
+				</div>
 
-			<div class="links">
-				<a href="https://wordpress.org/support/theme/envince/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
-					<span class="dashicons dashicons-thumbs-up"></span>
-					<span><?php esc_html_e( 'Sure', 'envince' ); ?></span>
-				</a>
+				<div class="envince-message__text">
+					<h3><?php echo esc_html( 'HAKUNA MATATA!' ); ?></h3>
+					<p>(
+						<?php
+						printf(
+						/* translators: %s: Smile icon */
+							esc_html__( 'The above word is just to draw your attention. %s', 'envince' ),
+							'<span class="dashicons dashicons-smiley smile-icon"></span>'
+						);
+						?>
+						)</p>
+					<p>
+						<?php
+						printf(
+						/* translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing of strong tag  */
+							esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'envince' ),
+							'<strong>',
+							esc_html( wp_get_theme( get_template() ) ),
+							'</strong>'
+						);
+						?>
+					</p>
+					<strong>
+						<?php esc_html_e( 'What benefit would you have?', 'envince' ); ?>
+					</strong>
+					<p>
+						<?php
+						printf(
+						/* translators: %s: Smiley icon */
+							esc_html__( 'Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. %s', 'envince' ),
+							'<span class="dashicons dashicons-smiley smile-icon"></span>'
+						);
+						?>
+					</p>
 
-				<a href="?nag_envince_ignore_theme_review_notice_partially=0" class="btn button-secondary">
-					<span class="dashicons dashicons-calendar"></span>
-					<span><?php esc_html_e( 'Maybe later', 'envince' ); ?></span>
-				</a>
+					<div class="links">
+						<a href="https://wordpress.org/support/theme/envince/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
+							<span class="dashicons dashicons-external"></span>
+							<span><?php esc_html_e( 'Sure, I\'d love to!', 'envince' ); ?></span>
+						</a>
 
-				<a href="?nag_envince_ignore_theme_review_notice=0" class="btn button-secondary">
-					<span class="dashicons dashicons-smiley"></span>
-					<span><?php esc_html_e( 'I already did', 'envince' ); ?></span>
-				</a>
+						<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
+							<span class="dashicons dashicons-smiley"></span>
+							<span><?php esc_html_e( 'I already did!', 'envince' ); ?></span>
+						</a>
 
-				<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/envince/' ); ?>" class="btn button-secondary" target="_blank">
-					<span class="dashicons dashicons-edit"></span>
-					<span><?php esc_html_e( 'Got theme support question?', 'envince' ); ?></span>
-				</a>
-			</div> <!-- /.links -->
+						<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
+							<span class="dashicons dashicons-calendar"></span>
+							<span><?php esc_html_e( 'Maybe later', 'envince' ); ?></span>
+						</a>
 
-			<a class="notice-dismiss" href="?nag_envince_ignore_theme_review_notice=0"></a>
+						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/envince/' ); ?>" class="btn button-secondary" target="_blank">
+							<span class="dashicons dashicons-testimonial"></span>
+							<span><?php esc_html_e( 'I have a query', 'envince' ); ?></span>
+						</a>
+					</div> <!-- /.links -->
+				</div> <!-- /.envince-message__text -->
+
+				<a class="notice-dismiss" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
+
+			</div> <!-- /.envince-message__content -->
 		</div> <!-- /.theme-review-notice -->
 		<?php
 	}
@@ -106,8 +145,15 @@ class Envince_Theme_Review_Notice {
 	 */
 	public function ignore_theme_review_notice() {
 		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['nag_envince_ignore_theme_review_notice'] ) && '0' == $_GET['nag_envince_ignore_theme_review_notice'] ) {
-			add_user_meta( get_current_user_id(), 'envince_ignore_theme_review_notice', 'true', true );
+		if ( isset( $_GET['nag_envince_ignore_theme_review_notice'] ) && isset( $_GET['_envince_ignore_theme_review_notice_nonce'] ) ) {
+
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_envince_ignore_theme_review_notice_nonce'] ), 'nag_envince_ignore_theme_review_notice_nonce' ) ) {
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'envince' ) );
+			}
+
+			if ( '0' === $_GET['nag_envince_ignore_theme_review_notice'] ) {
+				add_user_meta( get_current_user_id(), 'envince_ignore_theme_review_notice', 'true', true );
+			}
 		}
 	}
 
@@ -116,8 +162,15 @@ class Envince_Theme_Review_Notice {
 	 */
 	public function ignore_theme_review_notice_partially() {
 		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['nag_envince_ignore_theme_review_notice_partially'] ) && '0' == $_GET['nag_envince_ignore_theme_review_notice_partially'] ) {
-			update_user_meta( get_current_user_id(), 'nag_envince_ignore_theme_review_notice_partially', time() );
+		if ( isset( $_GET['nag_envince_ignore_theme_review_notice_partially'] ) && isset( $_GET['_envince_ignore_theme_review_notice_nonce'] ) ) {
+
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_envince_ignore_theme_review_notice_nonce'] ), 'nag_envince_ignore_theme_review_notice_partially_nonce' ) ) {
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'envince' ) );
+			}
+
+			if ( '0' === $_GET['nag_envince_ignore_theme_review_notice_partially'] ) {
+				update_user_meta( get_current_user_id(), 'nag_envince_ignore_theme_review_notice_partially', time() );
+			}
 		}
 	}
 
