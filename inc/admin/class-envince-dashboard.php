@@ -97,7 +97,7 @@ class Envince_Dashboard {
 						<h3><?php esc_html_e( 'Next Steps', 'envince' ); ?></h3>
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'envince' ) . '</a>', esc_url( 'https://docs.themegrill.com/envince' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'envince' ) . '</a>', esc_url( 'https://demo.themegrill.com/envince-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'envince' ) . '</a>', esc_url( 'https://themegrilldemos.com/envince-demos/' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'envince' ) . '</a>', esc_url( 'https://themegrill.com/themes/envince' ) ); ?></li>
 						</ul>
 					</div>
