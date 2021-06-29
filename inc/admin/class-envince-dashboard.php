@@ -40,10 +40,16 @@ class Envince_Dashboard {
 		/* translators: %s: Theme Name. */
 		$theme_page_name = sprintf( esc_html__( '%s Options', 'envince' ), $theme->Name );
 
-		$page = add_theme_page( $theme_page_name, $theme_page_name, 'edit_theme_options', 'envince-options', array(
-			$this,
-			'option_page'
-		) );
+		$page = add_theme_page(
+			$theme_page_name,
+			$theme_page_name,
+			'edit_theme_options',
+			'envince-options',
+			array(
+				$this,
+				'option_page',
+			)
+		);
 
 		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 	}
@@ -97,7 +103,7 @@ class Envince_Dashboard {
 						<h3><?php esc_html_e( 'Next Steps', 'envince' ); ?></h3>
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'envince' ) . '</a>', esc_url( 'https://docs.themegrill.com/envince' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'envince' ) . '</a>', esc_url( 'https://demo.themegrill.com/envince-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'envince' ) . '</a>', esc_url( 'https://themegrilldemos.com/envince-demos/' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'envince' ) . '</a>', esc_url( 'https://themegrill.com/themes/envince' ) ); ?></li>
 						</ul>
 					</div>
