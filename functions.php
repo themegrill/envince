@@ -115,7 +115,7 @@ add_action( 'wp_enqueue_scripts', 'envince_scripts', 1 );
  */
 function envince_block_editor_styles()
 {
-	wp_enqueue_style('envince-editor-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans');
+	wp_enqueue_style('envince-editor-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans&display=swap');
 	wp_enqueue_style('envince-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css');
 }
 add_action('enqueue_block_editor_assets', 'envince_block_editor_styles', 1, 1);
@@ -132,7 +132,7 @@ function envince_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_register_style( 'envince-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans' );
+	wp_register_style( 'envince-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans&display=swap' );
 	wp_enqueue_style( 'envince-googlefonts' );
 
 	/* Load the bootstrap files */
