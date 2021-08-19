@@ -40,7 +40,7 @@ Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
 = Version TBD =
-* Enhancement - Added 'font-display: swap' CSS property for fonts to ensure better load performance.
+* Enhancement - Added CSS font-display property and swap value for better performance.
 
 = Version 1.3.0 - 2021-05-07 =
 * Tweak - Update screenshot image source link.
