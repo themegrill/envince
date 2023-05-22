@@ -132,8 +132,9 @@ function envince_scripts() {
 
 	$suffix = hybrid_get_min_suffix();
 
-	wp_register_style( 'envince-googlefonts', '//fonts.googleapis.com/css?family=Raleway|Open+Sans&display=swap' );
-	wp_enqueue_style( 'envince-googlefonts' );
+    /* Load the fonts stylesheet. */
+	wp_register_style( 'envince-fonts', get_template_directory_uri() . '/css/fonts.css' );
+    wp_enqueue_style( 'envince-fonts' );
 
 	/* Load the bootstrap files */
 	wp_enqueue_style(
