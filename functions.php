@@ -133,8 +133,10 @@ function envince_scripts() {
 	$suffix = hybrid_get_min_suffix();
 
     /* Load the fonts stylesheet. */
-	wp_register_style( 'envince-fonts', get_template_directory_uri() . '/css/fonts.css' );
-    wp_enqueue_style( 'envince-fonts' );
+	wp_enqueue_style(
+        'envince-fonts',
+        trailingslashit( get_template_directory_uri() ) . "css/fonts.css"
+    );
 
 	/* Load the bootstrap files */
 	wp_enqueue_style(
