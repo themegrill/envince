@@ -1572,6 +1572,7 @@ li.recentcomments {
 
 .widget-area.col-sm-12.col-md-4 {
 	padding-top: 20px;
+    float: left;
 }
 
 .no-gutter .single-article {
