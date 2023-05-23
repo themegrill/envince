@@ -21,6 +21,24 @@
 @font-face {
     font-family: "Raleway";
     font-style: normal;
+    font-weight: 200;
+    font-stretch: normal;
+    font-display: fallback;
+    src: url(../assets/fonts/Raleway-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: italic;
+    font-weight: 200;
+    font-stretch: normal;
+    font-display: fallback;
+    src: url(../assets/fonts/Raleway-ExtraLightItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
     font-weight: 300;
     font-stretch: normal;
     font-display: fallback;
