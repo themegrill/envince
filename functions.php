@@ -244,3 +244,11 @@ function envince_body_class( $classes )
 	}
 	return $classes;
 }
+
+// Add the clearfix class to the array of existing classes.
+
+function add_clearfix_to_article_div( $classes ) {
+	$classes[] = 'clearfix';
+	return $classes;
+}
+add_filter( 'post_class', 'add_clearfix_to_article_div' );

@@ -1140,7 +1140,7 @@ Gutenberg Blocks Layout.
 }
 
 .entry-extra.col-md-5.col-xs-12.font-secondary {
-	width: 37%;
+	width: 100%;
 }
 
 .widget-area.col-sm-12.col-md-3 {
@@ -1187,6 +1187,10 @@ span.entry-category a {
 	font-family: 'Open Sans';
 	font-size: 15px;
 	font-weight: 400;
+}
+
+.entry-content-wrapper.col-md-7 {
+    padding: 10px 0 0 0;
 }
 
 .entry-content-wrapper .entry-title a {
@@ -1579,6 +1583,16 @@ li.recentcomments {
 	float: none;
 	vertical-align: top;
 	width: 49%;
+}
+
+@media (min-width: 992px) {
+    .entry-extra.col-md-5.col-xs-12.font-secondary {
+        width: 37%;
+    }
+
+    .entry-content-wrapper.col-md-7 {
+        padding: 0 15px 0;
+    }
 }
 
 /* Icons on Widget Title */
