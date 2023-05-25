@@ -245,9 +245,16 @@ function envince_body_class( $classes )
 	return $classes;
 }
 
-// Add the clearfix class to the array of existing classes.
-function add_clearfix_to_article_div( $classes ) {
+/**
+ * Adds a custom class to the post_class array.
+ * This function is hooked to the 'post_class' filter, and it adds class
+ * to the array of classes for post elements.
+ *
+ * @param array $classes An array of classes for post elements.
+ * @return array The modified array of classes.
+ */
+function envince_post_class( $classes ) {
 	$classes[] = 'clearfix';
 	return $classes;
 }
-add_filter( 'post_class', 'add_clearfix_to_article_div' );
+add_filter( 'post_class', 'envince_post_class' );
