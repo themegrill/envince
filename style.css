@@ -1190,7 +1190,8 @@ span.entry-category a {
 }
 
 .entry-content-wrapper.col-md-7 {
-    padding: 10px 0 0 0;
+    padding: 0;
+    margin-top: 10px;
 }
 
 .entry-content-wrapper .entry-title a {
@@ -1591,7 +1592,9 @@ li.recentcomments {
     }
 
     .entry-content-wrapper.col-md-7 {
-        padding: 0 15px 0;
+        padding: 0;
+        margin-top: 0;
+        margin-left: 15px;
     }
 }
 
