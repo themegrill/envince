@@ -41,6 +41,7 @@ Envince is distributed under the terms of the GNU GPL
 == Changelog ==
 = Version TBD =
 * Enhancement - GDPR Compliance.
+* Tweak       - Updated WordPress tested upto version.
 
 = Version 1.3.1 - 2021-08-19 =
 * Enhancement - Added CSS font-display property and swap value for better performance.
