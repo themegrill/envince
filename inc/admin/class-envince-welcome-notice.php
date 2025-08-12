@@ -106,7 +106,7 @@ class Envince_Welcome_Notice {
 			wp_send_json_error(
 				array(
 					'errorCode'    => 'permission_denied',
-					'errorMessage' => __( 'You do not have permission to perform this action.', 'colormag' ),
+					'errorMessage' => __( 'You do not have permission to perform this action.', 'envince' ),
 				)
 			);
 			exit;
