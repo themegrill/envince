@@ -39,6 +39,9 @@ Envince WordPress Theme, Copyright (c) 2015, ThemeGrill
 Envince is distributed under the terms of the GNU GPL
 
 == Changelog ==
+= Version 1.3.2 - 2025-08-12 =
+* Update - General security measure.
+
 = Version 1.3.1 - 2023-05-29 =
 * Enhancement - GDPR Compliance.
 * Tweak       - Updated WordPress tested upto version.
